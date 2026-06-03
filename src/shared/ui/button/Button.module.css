@@ -3,7 +3,6 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  padding: 21px;
   font-size: var(--font-size-text);
   font-weight: var(--font-weight-regular);
   font-style: normal;
@@ -18,6 +17,7 @@
 .primary {
   background-color: var(--button-primary-color);
   color: white;
+  padding: 21px;
 }
 
 .primary:disabled {
@@ -36,6 +36,7 @@
 .secondary {
   background-color: var(--button-secondary-color);
   color: var(--button-primary-color);
+  padding: 21px;
 }
 
 .secondary:disabled {
@@ -54,7 +55,32 @@
 .icon {
   background-color: var(--button-icon-color);
   border: none;
-  padding: 8px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon img,
+.icon svg {
+  width: 95%;
+  height: 95%;
+  object-fit: contain;
+}
+
+.icon-small {
+  width: 32px;
+  height: 32px;
+}
+
+.icon-medium {
+  width: 40px;
+  height: 40px;
+}
+
+.icon-large {
+  width: 48px;
+  height: 48px;
 }
 
 .icon:disabled {
@@ -73,6 +99,8 @@
 .btnWithIcon {
   background-color: var(--button-primary-color);
   color: white;
+  padding: 21px;
+
 }
 
 .btnWithIcon:disabled {

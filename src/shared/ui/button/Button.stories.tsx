@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from './Button';
+import styles from './Button.module.css';
 
 const meta = {
   title: 'Components/Button',
@@ -25,17 +26,22 @@ export const Secondary: Story = {
   },
 };
 
-export const Icon: Story = {
+// Кнопка-иконка: только иконка, без текста
+export const IconOnly: Story = {
   args: {
     variant: 'icon',
-    children: '👍',
+    iconName: 'add',        
+    children: '',
+    className: styles['icon-large'],           
   },
 };
 
+// Кнопка с иконкой и текстом
 export const BtnWithIcon: Story = {
   args: {
     variant: 'btnWithIcon',
-    children: '📎 Add habit',
+    iconName: 'editProfile',  
+    children: 'Редактировать профиль',
   },
 };
 
@@ -43,7 +49,7 @@ export const BtnWithIcon: Story = {
 export const Disabled: Story = {
   args: {
     variant: 'primary',
-    children: 'Disabled Button',
+    children: 'Неактивная кнопка',
     disabled: true,
   },
 };
