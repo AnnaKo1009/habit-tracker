@@ -1,0 +1,25 @@
+@import '../src/app/styles/variables.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #FFFAFA;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+    
+}
+
+
+
+

@@ -1,0 +1,27 @@
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+
+:root {
+  --font-family: 'Inter', sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 800;
+
+  --font-size-text: 20px;
+  --font-size-title: 45px;
+  --font-size-error: 17px;
+
+  --line-height-text: 24px;
+  --line-height-title: 48px;
+
+  --button-primary-color: #1C1C1C;
+  --button-disabled-color: #606E8C;
+  --button-hover-color: #FFB300;
+  --button-active-color: #FF8243;
+  --button-secondary-color: #fe976c;
+  --button-icon-color: #F19CBB;
+  
+
+}
