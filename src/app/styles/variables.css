@@ -1,10 +1,10 @@
-@import '@fontsource/inter/400.css';
-@import '@fontsource/inter/500.css';
-@import '@fontsource/inter/600.css';
-@import '@fontsource/inter/700.css';
+@import "@fontsource/manrope/400.css";
+@import "@fontsource/manrope/500.css";
+@import "@fontsource/manrope/600.css";
+@import "@fontsource/manrope/700.css";
 
 :root {
-  --font-family: 'Inter', sans-serif;
+  --font-family: "Manrope", sans-serif;
   --font-weight-regular: 400;
   --font-weight-medium: 600;
   --font-weight-bold: 800;
@@ -16,12 +16,21 @@
   --line-height-text: 24px;
   --line-height-title: 48px;
 
-  --button-primary-color: #1C1C1C;
+  --button-primary-color: #475569; /* серый  */
+  --button-disabled-color: #94a3b8; /* серо-голубой (было #606E8C) */
+  --button-hover-color: #14b8a6; /* мятный (было #FFB300) */
+  --button-active-color: #0d9488; /* тёмно-мятный (было #FF8243) */
+  --button-secondary-color: #e2e8f0; /* светлый серо-голубой (было #fe976c) */
+  --button-icon-color: #f19cbb; /* розовый акцент */
+
+
+  /* запасной серый
+  --button-primary-color: #334155 */
+
+  /* --button-primary-color: #1C1C1C;
   --button-disabled-color: #606E8C;
   --button-hover-color: #FFB300;
   --button-active-color: #FF8243;
   --button-secondary-color: #fe976c;
-  --button-icon-color: #F19CBB;
-  
-
+  --button-icon-color: #F19CBB; */
 }

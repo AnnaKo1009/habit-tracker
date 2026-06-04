@@ -10,6 +10,7 @@ export const Button: React.FC<ButtonProps> = ({
     className = '',
     variant = 'primary',
     iconName,
+    size,
 
 }) => {
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -19,7 +20,7 @@ export const Button: React.FC<ButtonProps> = ({
     }
 return (<button
    disabled={disabled}
-    className={`${styles.button} ${styles[variant]} ${className}`}
+    className={`${styles.button} ${styles[variant]} ${size ? styles[`${variant}-${size}`] : ''} ${className}`}
     onClick={handleClick}
     >
        {iconName && variant === 'btnWithIcon' && (
