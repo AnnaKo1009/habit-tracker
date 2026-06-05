@@ -1,0 +1,59 @@
+.container {
+  position: relative;
+  border-radius: 34px;
+  padding: 36px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  background-size: cover;           
+  background-repeat: no-repeat;
+  background-position: center;      
+  min-height: 200px;
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.title {
+  font-size: var(----font-size-text);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 8px;
+  max-width: 100%;             
+  word-break: break-word;       
+}
+
+.text {
+  font-size: 12px;
+  max-width: 100%;              
+  word-break: break-word; 
+  padding: 8px 0;     
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 50%;           
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+
+.buttonContainer {
+    position: absolute;
+    bottom: 8%;
+    left: 13%;
+    width: 15%;        /* ← 15% от ширины виджета */
+    max-width: 56px;   /* ← не больше 56px */
+    min-width: 32px;   /* ← не меньше 32px */
+    aspect-ratio: 1;   /* ← квадратная пропорция */
+}
+
+.addButton {
+    width: 100%;
+    height: 100%;
+}

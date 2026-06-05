@@ -1,0 +1,27 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.small {
+  width: 67px;
+  height: 52px;
+}
+
+.medium {
+  width: 119px;
+  height: 92px;
+}
+
+.large {
+  width: 197px;
+  height: 152px;
+}
+
+/* .full {
+
+}
+
+.icon {
+} */

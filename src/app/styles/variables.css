@@ -11,7 +11,7 @@
 
   --font-size-text: 20px;
   --font-size-title: 45px;
-  --font-size-error: 17px;
+  --font-size-error: 15px;
 
   --line-height-text: 24px;
   --line-height-title: 48px;
@@ -22,6 +22,8 @@
   --button-active-color: #0d9488; /* тёмно-мятный (было #FF8243) */
   --button-secondary-color: #e2e8f0; /* светлый серо-голубой (было #fe976c) */
   --button-icon-color: #f19cbb; /* розовый акцент */
+  --input-color: #0A3C5C;
+
 
 
   /* запасной серый
