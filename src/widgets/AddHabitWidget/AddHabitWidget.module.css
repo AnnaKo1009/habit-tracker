@@ -47,10 +47,10 @@
     position: absolute;
     bottom: 8%;
     left: 13%;
-    width: 15%;        /* ← 15% от ширины виджета */
-    max-width: 56px;   /* ← не больше 56px */
-    min-width: 32px;   /* ← не меньше 32px */
-    aspect-ratio: 1;   /* ← квадратная пропорция */
+    width: 15%;       
+    max-width: 56px;   
+    min-width: 32px;   
+    aspect-ratio: 1;  
 }
 
 .addButton {
