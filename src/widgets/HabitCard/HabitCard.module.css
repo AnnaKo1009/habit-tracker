@@ -1,0 +1,45 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 38px 38px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #EEF1F4;
+  gap: 16px;
+} 
+
+  .title {
+  flex: 1;
+  text-align: left;
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-text);
+  color: var(--button-primary-color);
+  line-height: 1.5;          
+  word-break: break-word;
+}
+
+
+.iconButton {
+  background-color: var(--button-hover-color);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.iconButton:hover:not(:disabled) {
+  background-color: var(--button-icon-color);
+} 
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}

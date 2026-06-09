@@ -13,7 +13,8 @@ html {
 }
 
 body {
-  background-color: #FFFAFA;
+  /* background-color: #FFFAFA; */
+  background-color: white;
   margin: 0;
   padding: 0;
   overflow-x: hidden;

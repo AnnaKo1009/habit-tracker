@@ -46,7 +46,7 @@
 .buttonContainer {
     position: absolute;
     bottom: 8%;
-    left: 13%;
+    left: 5%;
     width: 15%;       
     max-width: 56px;   
     min-width: 32px;   
@@ -56,4 +56,10 @@
 .addButton {
     width: 100%;
     height: 100%;
+    min-width: 80px;
+    background-color: var(--button-icon-color);
+}
+
+.addButton:hover:not(:disabled) {
+  background-color: var(--button-hover-color);
 }

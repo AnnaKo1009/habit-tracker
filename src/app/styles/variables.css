@@ -17,10 +17,10 @@
   --line-height-title: 48px;
 
   --button-primary-color: #475569; /* серый  */
-  --button-disabled-color: #94a3b8; /* серо-голубой (было #606E8C) */
-  --button-hover-color: #14b8a6; /* мятный (было #FFB300) */
-  --button-active-color: #0d9488; /* тёмно-мятный (было #FF8243) */
-  --button-secondary-color: #e2e8f0; /* светлый серо-голубой (было #fe976c) */
+  --button-disabled-color: #94a3b8; /* серо-голубой */
+  --button-hover-color: #14b8a6; /* мятный  */
+  --button-active-color: #0d9488; /* тёмно-мятный  */
+  --button-secondary-color: #e2e8f0; /* светлый серо-голубой  */
   --button-icon-color: #f19cbb; /* розовый акцент */
   --input-color: #0A3C5C;
 

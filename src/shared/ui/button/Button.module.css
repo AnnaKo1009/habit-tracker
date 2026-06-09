@@ -53,7 +53,6 @@
 }
 
 .icon {
-  background-color: var(--button-icon-color);
   border: none;
   padding: 0;
   display: inline-flex;
@@ -89,9 +88,9 @@
   color: var(--button-primary-color);
 }
 
-.icon:hover:not(:disabled) {
+/* .icon:hover:not(:disabled) {
   background-color: var(--button-hover-color);
-}
+} */
 
 .icon:active:not(:disabled) {
   background-color: var(--button-active-color);
