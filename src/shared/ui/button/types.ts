@@ -4,6 +4,6 @@ export interface ButtonProps {
     onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
     className?: string;
     variant?: 'primary'| 'secondary' | 'icon' | 'btnWithIcon';
-    iconName?: 'add' | 'close' | 'delete' | 'edit' | 'editProfile' | 'pictEdit';
+    iconName?: 'add' | 'close' | 'delete' | 'edit' | 'editProfile' | 'pictEdit' | 'stats';
     size?: 'small' | 'medium' | 'large';
 }

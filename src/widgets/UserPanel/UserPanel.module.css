@@ -1,0 +1,26 @@
+.userPanelContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+    gap: 16px;
+    background-color: white;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 280px;
+}
+
+.name {
+    font-size: var(--font-size-text);
+    font-weight: var(--font-weight-medium);
+    color: var(--button-primary-color);
+    text-align: center;
+}
+
+.actionButton {
+    margin-top: 0;
+    font-size: 16px;       
+    padding: 6px 12px;
+    width: 100%; 
+}

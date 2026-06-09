@@ -23,6 +23,7 @@ export const AllIcons: Story = {
       <Icon name="add" />
       <Icon name="editProfile"/>
       <Icon name="pictEdit"/>
+      <Icon name="stats"/>
     </div>
   ),
 };
