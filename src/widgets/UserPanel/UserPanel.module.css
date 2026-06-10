@@ -6,7 +6,7 @@
     padding: 32px 16px;
     gap: 16px;
     background-color: white;
-    border-radius: 15px;
+    border-radius: var(--border-radius-primary);
     width: 100%;
     max-width: 280px;
 }
@@ -21,6 +21,6 @@
 .actionButton {
     margin-top: 0;
     font-size: 16px;       
-    padding: 6px 12px;
+    padding: 8px 12px;
     width: 100%; 
 }

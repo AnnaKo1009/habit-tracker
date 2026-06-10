@@ -11,9 +11,9 @@ export const AddHabitWidget: React.FC<AddHabitWidgetProps> = ({
   return (
     <div
       className={`${styles.container} ${className}`}
-      style={
-        backgroundImage ? { backgroundImage: `url(${backgroundImage})` } : {}
-      }
+      style={{
+        backgroundImage: 'url(/images/addWidgetBackground.png)'
+      }}
     >
       <span className={`${styles.title}`}>Новое дело или привычка</span>
       <div className={styles.textContainer}>

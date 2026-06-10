@@ -7,7 +7,7 @@
   border-radius: 7px;
   cursor: pointer;
   transition: all 0.2s ease;
-  background-color: #EEF1F4;
+  background-color: var(--background-color);
   gap: 16px;
 } 
 
