@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { UserPanel } from './UserPanel';
 
 const meta = {
-    title: 'Components/UserPanel',
+    title: 'Widgets/UserPanel',
     component: UserPanel,
     tags: ['autodocs'],
 } satisfies Meta<typeof UserPanel>;

@@ -1,0 +1,97 @@
+.container {
+    width: 100%;
+    background-color: white;
+    border-radius: 34px;
+    padding: 16px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+
+.container :global(.react-calendar) {
+    border: none;
+    width: 100%;
+    font-family: var(--font-family);
+}
+
+.container :global(.react-calendar__navigation) {
+    margin-bottom: 16px;
+}
+
+.container :global(.react-calendar__navigation button) {
+    color: #1E293B;
+    font-weight: var(--font-weight-medium);
+    background-color: transparent;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+/* Прячем стрелки */
+.container :global(.react-calendar__navigation button:first-child),
+.container :global(.react-calendar__navigation button:last-child) {
+    font-size: 0;           
+    position: relative;
+}
+.container :global(.react-calendar__navigation button:first-child::before) {
+    content: '←';           /* ← Стрелка влево */
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.container :global(.react-calendar__navigation button:last-child::before) {
+    content: '→';           /* → Стрелка вправо */
+    font-size: 18px;
+    font-weight: normal;
+}
+
+/* заменить двойные стрелки (для года/десятилетия) */
+.container :global(.react-calendar__navigation button:nth-child(2)) {
+    font-size: 0;
+    position: relative;
+}
+
+.container :global(.react-calendar__navigation button:nth-child(2)::before) {
+    content: '«';           /* Двойная стрелка влево */
+    font-size: 16px;
+}
+
+.container :global(.react-calendar__navigation button:nth-child(4)) {
+    font-size: 0;
+    position: relative;
+}
+
+.container :global(.react-calendar__navigation button:nth-child(4)::before) {
+    content: '»';           /* Двойная стрелка вправо */
+    font-size: 16px;
+}
+
+
+
+.container :global(.react-calendar__weekdays) {
+    font-weight: var(--font-weight-medium);
+    color: var(--button-primary-color);
+}
+
+.container :global(.react-calendar__tile) {
+    border-radius: 8px;
+    transition: all 0.2s;
+    font-size: 12px;
+    padding: 8px;
+}
+
+.container :global(.react-calendar__tile.react-calendar__tile--active) {
+    background: linear-gradient(135deg, #14B8A6, #0D9488);
+    box-shadow: 0 4px 10px rgba(20, 184, 166, 0.3);
+}
+
+.container :global(.react-calendar__tile.react-calendar__tile--now) {
+    background-color: transparent;
+}
+
+.container :global(.react-calendar__tile:hover) {
+   background-color: #f19cbb;
+}

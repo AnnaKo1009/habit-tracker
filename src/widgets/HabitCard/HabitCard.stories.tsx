@@ -3,7 +3,7 @@ import { HabitCard } from './HabitCard';
 import { useState } from 'react';
 
 const meta = {
-  title: 'Components/HabitCard',
+  title: 'Widgets/HabitCard',
   component: HabitCard,
   tags: ['autodocs'],
 } satisfies Meta<typeof HabitCard>;

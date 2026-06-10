@@ -21,7 +21,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { AddHabitWidget } from './AddHabitWidget';
 
 const meta = {
-  title: 'Components/AddHabitWidget',
+  title: 'Widgets/AddHabitWidget',
   component: AddHabitWidget,
   tags: ['autodocs'],
 } satisfies Meta<typeof AddHabitWidget>;
