@@ -4,7 +4,7 @@
   justify-content: space-between;
   width: 100%;
   padding: 38px 38px;
-  border-radius: 7px;
+  border-radius: var(--border-radius-primary);
   cursor: pointer;
   transition: all 0.2s ease;
   background-color: var(--background-color);

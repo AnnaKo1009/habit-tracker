@@ -1,0 +1,24 @@
+.page {
+    background-color: var(--background-color);
+    width: 100%;
+
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: row;
+     align-items: flex-start; 
+    justify-content: space-between;
+    padding: 20px 15px;
+}
+
+.habitsContainer {
+    background-color: white;
+    padding: 50px;
+    width: 60%;
+    border-radius: var(--border-radius-primary);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}

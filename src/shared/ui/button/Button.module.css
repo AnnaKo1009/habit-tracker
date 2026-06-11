@@ -113,7 +113,7 @@
 }
 
 .btnWithIcon:hover:not(:disabled) {
-  background-color: var(--button-hover-color);
+  background-color: var(--button-icon-color);
 }
 
 .btnWithIcon:active:not(:disabled) {
