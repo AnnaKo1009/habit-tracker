@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { FunctionsPanel } from './FunctionsPanel';
+import { FunctionsPanelUI } from './FunctionsPanel';
 
 const meta = {
-    title: 'Widgets/FunctionsPanel',
-    component: FunctionsPanel,
+    title: 'Widgets/FunctionsPanelUI',
+    component: FunctionsPanelUI,
     tags: ['autodocs'],
-} satisfies Meta<typeof FunctionsPanel>;
+} satisfies Meta<typeof FunctionsPanelUI>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

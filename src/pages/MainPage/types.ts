@@ -1,4 +1,4 @@
-import type { Habit } from '../../widgets/HabitCard/types';
+import type { Habit } from '../../widgets/HabitCard/ui/types';
 
 export interface MainPageProps {
     userName: string;

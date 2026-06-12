@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
-import { Header } from "../../widgets/Header";
+import { Header } from "../../widgets/Header/ui";
 import { UserPanel } from "../../widgets/UserPanel";
-import { HabitCard } from "../../widgets/HabitCard";
-import { FunctionsPanel } from "../../widgets/FunctionsPanel";
+import { HabitCard } from "../../widgets/HabitCard/ui";
+import { FunctionsPanel } from "../../widgets/FunctionsPanel/ui";
 import type { MainPageProps } from "./types";
 import styles from './MainPage.module.css'
 

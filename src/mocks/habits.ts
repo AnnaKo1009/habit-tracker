@@ -1,4 +1,4 @@
-import type { Habit } from '../widgets/HabitCard/types';
+import type { Habit } from '../widgets/HabitCard/ui/types';
 
 export const mockHabits: Habit[] = [
     { id: 1, name: 'Пить воду', completed: false, completedDates: ['2026-06-10', '2026-06-11'] },

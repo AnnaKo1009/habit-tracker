@@ -6,7 +6,7 @@ export interface Habit {
 
 }
 
-export interface HabitCardProps {
+export interface HabitCardUIProps {
     habit: Habit;
     onEdit?: (id: number) => void;
     onDelete?: (id: number) => void;

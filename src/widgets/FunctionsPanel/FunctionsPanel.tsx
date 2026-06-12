@@ -1,21 +1,17 @@
-import { AddHabitWidget } from "../AddHabitWidget";
-import { HabitCalendar } from "../HabitCalendar/HabitCalendar";
-import styles from './FunctionsPanel.module.css';
-import type { FunctionsPanelProps } from "./types";
+import { type FC } from 'react';
+import type { FunctionsPanelProps } from './FunctionsPanel.types';
+import { FunctionsPanelUI } from './ui/FunctionsPanel';
 
-export const FunctionsPanel: React.FC<FunctionsPanelProps> = ({
-    onAddHabit,
-    onDateChange
+export const FunctionsPanel: FC<FunctionsPanelProps> = ({
+    className,
+    onAddHabit,      
+    onDateChange,
 }) => {
     return (
-        <div className={styles.panel}>
-            <AddHabitWidget onAdd={onAddHabit}/>
-            <HabitCalendar onDateChange={onDateChange}/>
-            <div className={styles.placeholder}>
-                {/* Здесь позже будет график статистики */}
-                <p>Статистика появится позже</p>
-            </div>
-        </div>
-    )
-
-}
+        <FunctionsPanelUI 
+            className={className} 
+            onAddHabit={onAddHabit} 
+            onDateChange={onDateChange}
+        />
+    );
+};

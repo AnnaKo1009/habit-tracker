@@ -1,2 +1,2 @@
-export { UserPanel } from './UserPanel'
-export type { UserPanelProps } from './types';
+export { UserPanel } from './UserPanel';
+export type { UserPanelProps } from './UserPanel.types';
