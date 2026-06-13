@@ -1,8 +1,8 @@
 import { type FC } from 'react';
 import { AddHabitWidget } from "../../AddHabitWidget/AddHabitWidget";
-import { HabitCalendar } from "../../HabitCalendar/HabitCalendar";
 import styles from './FunctionsPanel.module.css';
 import type { FunctionsPanelUIProps } from "./types";
+import { HabitCalendar } from "../../HabitCalendar/HabitCalendar";
 
 export const FunctionsPanelUI: FC<FunctionsPanelUIProps> = ({
     onAddHabit,

@@ -1,6 +1,13 @@
 import { useState, useEffect, type FC } from "react";
-import { type HeaderProps } from "./Header.types";
 import { HeaderUI } from './ui/Header' ;
+
+export interface HeaderProps {
+    variant: 'dashboard' | 'auth';
+    userName?: string;
+    userAvatar?: string;
+    className?: string;
+    onClick?: () => void;
+}
 
 export const Header: FC<HeaderProps> = ({
 variant,
@@ -17,6 +24,7 @@ variant,
     }, 1000);
     return () => clearInterval(timer);
   }, []);
+  
     return (
         <HeaderUI variant={variant}
         userName={userName}

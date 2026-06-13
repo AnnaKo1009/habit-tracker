@@ -1,6 +1,11 @@
 import { type FC } from 'react';
-import type { UserPanelProps} from './UserPanel.types';
 import { UserPanelUI } from './ui/UserPanel';
+
+export interface UserPanelProps {
+    userName: string;
+    userAvatar?: string;
+    className?: string;
+}
 
 export const UserPanel: FC<UserPanelProps> = ({
     userName,
