@@ -1,33 +1,29 @@
+import { useState } from "react";
+import { useAppDispatch, useAppSelector } from "../../hooks/hooks"
+import { MainPageUI } from "./ui";
 
 
+export const MainPage = () => {
+    const dispatch  = useAppDispatch();
+    const habits = useAppSelector((state) => state.habits.items);
+    const userName = useAppSelector((state) => state.user.name);
+    const userAvatar = useAppSelector((state) => state.user.avatar);
 
-//     const [selectedDate, setSelectedDate] = useState(new Date());
+    const [selectedDate, setSelectedDate] = useState(new Date());
 
-//     const handleLogoClick = () => {
-//         console.log('Logo clicked')
-//     }
+    return (
+        <MainPageUI
+          userName={userName}
+          userAvatar={userAvatar}
+          habits={habits}
+          selectedDate={selectedDate}
+          onAddHabit={handleAddHabit}
+          onEditHabit={handleEditHabit}
+          onDeleteHabit={handleDeleteHabit}
+          onToggleHabit={handleToggleHabit}
+          onDateChange={handleDateChange}
 
-//     const handleEditProfile = () => {
-//         console.log('Edit profile')
-//     }
+          />
 
-//     const handleAddItem = () => {
-//         onAddHabit?.();
-//     }
-//    const handleEditItem = (id: number) => {
-//         onEditHabit?.(id);
-//     };
-
-//     const handleDeleteItem = (id: number) => {
-//         onDeleteHabit?.(id);
-//     };
-
-//     const handleToggleItem = (id: number) => {
-//         onToggleHabit?.(id);
-//     };
-
-//     const handleDateChange = (date: Date) => {
-//         setSelectedDate(date);
-//     };
-
-//     const selectedDateString = selectedDate.toISOString().split('T')[0];
+    )
+}

@@ -4,10 +4,10 @@ export interface MainPageUIProps {
     userName: string;
     userAvatar?: string;
     habits: Habit[];
-    onAddHabit: () => void;
-    onEditHabit: (id: number) => void;
-    onDeleteHabit: (id: number) => void;
-    onToggleHabit: (id: number) => void;
     selectedDate: Date;
+    onAddHabit: (name: string) => void;
+    onEditHabit: (id: number, newName: string) => void;
+    onDeleteHabit: (id: number) => void;
+    onToggleHabit: (id: number, date: string) => void;
     onDateChange: (date: Date) => void; 
 }

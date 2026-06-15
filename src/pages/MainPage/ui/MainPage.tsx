@@ -10,17 +10,17 @@ export const MainPageUI: FC<MainPageUIProps> = ({
     userName,
     userAvatar,
     habits,
+    selectedDate,
     onAddHabit,
     onEditHabit,
     onDeleteHabit,
     onToggleHabit,
-    selectedDate,
-     onDateChange,
+    onDateChange,
 }) => {
-
-
-const filteredHabits = habits.filter(habit => 
-    habit.completedDates?.includes(selectedDate.toISOString().split('T')[0])
+    
+    const selectedDateString = selectedDate.toISOString().split('T')[0];
+    const filteredHabits = habits.filter(habit => 
+    habit.completedDates?.includes(selectedDateString)
 );
 
     return (
@@ -33,9 +33,9 @@ const filteredHabits = habits.filter(habit =>
                         <HabitCard 
                         key={habit.id}
                         habit={habit}
-                        onEdit={() => onEditHabit(habit.id)}
-                        onDelete={() => onDeleteHabit(habit.id)}
-                        onToggle={() => onToggleHabit(habit.id)}/>
+                        onEdit={(id) => onEditHabit(id, prompt ('Новое название') || habit.name )}
+                        onDelete={onDeleteHabit}
+                        onToggle={(id) => onToggleHabit(id, selectedDateString)}/>
 
                     ))}
                     {filteredHabits.length === 0 && (
@@ -44,7 +44,7 @@ const filteredHabits = habits.filter(habit =>
                         </div>
                     )}
                 </div>
-                <FunctionsPanel className={styles.functionsPanel} onAddHabit={onAddHabit} onDateChange={onDateChange}/>
+                <FunctionsPanel onAddHabit={ () => onAddHabit(prompt('Название привычки') || '')} onDateChange={onDateChange}/>
             </div>
         </div>
     )
