@@ -12,21 +12,24 @@ export default meta;
 
 export const Interactive = () => {
     const [habit, setHabit] = useState({
-        id: 1,
+        id: '1',
         name: 'Пить воду',
         completed: false,
         completedDates: [],
+        createdAt: new Date().toISOString().split('T')[0],
+        startDate: new Date().toISOString().split('T')[0],
     });
+    const [selectedDate, setSelectedDate] = useState(new Date());
 
-    const handleToggle = (id: number) => {
+    const handleToggle = (id: string) => {
         setHabit(prev => ({ ...prev, completed: !prev.completed }));
     };
 
-    const handleEdit = (id: number) => {
+    const handleEdit = (id: string) => {
         alert(`Редактировать: ${habit.name}`);
     };
 
-    const handleDelete = (id: number) => {
+    const handleDelete = (id: string) => {
         alert(`Удалить: ${habit.name}`);
     };
 
@@ -36,6 +39,7 @@ export const Interactive = () => {
             onToggle={handleToggle}
             onEdit={handleEdit}
             onDelete={handleDelete}
+            selectedDate={selectedDate}
         />
     );
 };

@@ -8,6 +8,8 @@ export const FunctionsPanelUI: FC<FunctionsPanelUIProps> = ({
     onAddHabit,
     onDateChange
 }) => {
+
+    
     return (
         <div className={styles.panel}>
             <AddHabitWidget onAdd={onAddHabit}/>

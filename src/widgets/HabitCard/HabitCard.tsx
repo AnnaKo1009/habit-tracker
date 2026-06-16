@@ -6,9 +6,10 @@ import type { Habit } from './ui/types';
 export interface HabitCardProps {
     habit: Habit;
     className?: string;
-    onDelete?: (id: number) => void;  
-    onEdit?: (id: number) => void;    
-    onToggle?: (id: number) => void;
+    onDelete?: (id: string) => void;  
+    onEdit?: (id: string) => void;    
+    onToggle?: (id: string, date: string) => void;
+    selectedDate: Date;
 }
 
 export const HabitCard: FC<HabitCardProps> = ({
@@ -16,21 +17,22 @@ export const HabitCard: FC<HabitCardProps> = ({
     className,
     onDelete,
     onEdit,
-    onToggle
+    onToggle,
+    selectedDate,
 }) => {
-    const handleDeleteItem = (id: number) => {
+    const handleDeleteItem = (id: string) => {
         onDelete?.(id);
     }
 
-    const handleEditItem = (id: number) => {
+    const handleEditItem = (id: string) => {
         onEdit?.(id);
     }
 
-    const handleToggleItem = (id: number) => {
-        onToggle?.(id);
+    const handleToggleItem = (id: string, date: string) => {
+        onToggle?.(id, date);
     }
 
     return (
-        <HabitCardUI habit={habit} className={className} onEdit={handleEditItem} onDelete={handleDeleteItem} onToggle={handleToggleItem} />
+        <HabitCardUI habit={habit} className={className} onEdit={handleEditItem} onDelete={handleDeleteItem} onToggle={handleToggleItem} selectedDate={selectedDate} />
     )
 }

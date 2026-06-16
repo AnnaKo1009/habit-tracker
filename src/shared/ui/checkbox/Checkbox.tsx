@@ -10,8 +10,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({ checked, onChange }) => {
         checked={checked}
         onChange={onChange}
         aria-label="Отметить привычку"
-        className={styles.checkboxInput}
-      ></input>
+        className={styles.checkboxInput} />
       <span className={styles.customCheckbox} />
       </label>
   );

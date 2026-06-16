@@ -10,11 +10,17 @@ export const HabitCardUI: FC<HabitCardUIProps> = ({
     onDelete,
     onEdit,
     onToggle,
-    className=''
+    className='',
+     selectedDate,
 }) => {
+
+    const selectedDateString = selectedDate.toLocaleDateString('en-CA'); 
+    const isCompleted = habit.completedDates.includes(selectedDateString);
+
+
     return (
         <div className={`${styles.card} ${className}`}>
-            <Checkbox checked={habit.completed} onChange={() => onToggle(habit.id)}/>
+            <Checkbox checked={isCompleted} onChange={() => onToggle(habit.id, selectedDateString)}/>
             <span className={styles.title}>{habit.name}</span>
             <div className={styles.actions}>
                 <Button variant='icon' iconName='edit' size='small' onClick={() => onEdit?.(habit.id)} className={styles.iconButton}/>

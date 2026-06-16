@@ -18,10 +18,17 @@ export const MainPageUI: FC<MainPageUIProps> = ({
     onDateChange,
 }) => {
     
-    const selectedDateString = selectedDate.toISOString().split('T')[0];
-    const filteredHabits = habits.filter(habit => 
-    habit.completedDates?.includes(selectedDateString)
-);
+    const selectedDateString = selectedDate.toLocaleDateString('en-CA');
+    const filteredHabits = habits.filter(habit => {
+        if (habit.startDate <= selectedDateString) {
+            return true;
+        }
+        if (habit.completedDates?.includes(selectedDateString)) {
+            return true;
+        }
+        return false;
+
+});
 
     return (
         <div className={styles.page}>
@@ -33,6 +40,7 @@ export const MainPageUI: FC<MainPageUIProps> = ({
                         <HabitCard 
                         key={habit.id}
                         habit={habit}
+                        selectedDate={selectedDate}
                         onEdit={(id) => onEditHabit(id, prompt ('Новое название') || habit.name )}
                         onDelete={onDeleteHabit}
                         onToggle={(id) => onToggleHabit(id, selectedDateString)}/>

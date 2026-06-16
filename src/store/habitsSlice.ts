@@ -2,10 +2,12 @@ import { createSlice,  type PayloadAction } from '@reduxjs/toolkit';
 import { mockHabits } from '../mocks/habits';
 
 interface Habit {
-    id: number;
+    id: string;
     name: string; 
     completed: boolean;
     completedDates: string[];
+    createdAt: string;   
+    startDate: string;
 }
 
 interface HabitsState {
@@ -23,14 +25,14 @@ const habitsSlice = createSlice({
         addHabit: (state, action: PayloadAction<Habit>) => {
             state.items.unshift(action.payload);
         },
-        deleteHabit: (state, action: PayloadAction<number>) => {
+        deleteHabit: (state, action: PayloadAction<string>) => {
             state.items = state.items.filter(h => h.id !== action.payload);
         },
-        editHabit: (state, action: PayloadAction<{id: number; name: string}>) => {
+        editHabit: (state, action: PayloadAction<{id: string; name: string}>) => {
             const habit = state.items.find(h => h.id === action.payload.id);
             if (habit) habit.name = action.payload.name;
         },
-        toggleHabitDate: (state, action: PayloadAction<{id:number, date: string}>) => {
+        toggleHabitDate: (state, action: PayloadAction<{id: string, date: string}>) => {
             const habit = state.items.find (h => h.id === action.payload.id);
             if (habit) {
                 const index = habit.completedDates.indexOf(action.payload.date)
