@@ -1,35 +1,32 @@
-import { type FC } from 'react';
-import { UserPanelUI } from './ui/UserPanel';
+import { type FC } from "react";
+import { UserPanelUI } from "./ui/UserPanel";
+import { useAppSelector } from "../../hooks/hooks";
 
 export interface UserPanelProps {
-    userName: string;
-    userAvatar?: string;
-    className?: string;
+  className?: string;
 }
 
-export const UserPanel: FC<UserPanelProps> = ({
-    userName,
-    userAvatar,
-    className
-}) => {
-    const handleEditProfile = () => {
-        // TODO: открыть модалку редактирования профиля
-        console.log('Edit profile clicked');
-    };
+export const UserPanel: FC<UserPanelProps> = ({ className }) => {
+  const userName = useAppSelector((state) => state.user.name);
+  const userAvatar = useAppSelector((state) => state.user.avatar);
 
-    const handleCheckStats = () => {
-        // TODO: открыть модалку статистики профиля
-        console.log('Stats clicked');
-    }
+  const handleEditProfile = () => {
+    // TODO: открыть модалку редактирования профиля
+    console.log("Edit profile clicked");
+  };
 
-    return (
-        <UserPanelUI
-        userName={userName}
-        userAvatar={userAvatar}
-        className={className}
-        onEditProfile={handleEditProfile}
-        onCheckStats={handleCheckStats}
-        />
-    );
+  const handleCheckStats = () => {
+    // TODO: открыть модалку статистики профиля
+    console.log("Stats clicked");
+  };
 
+  return (
+    <UserPanelUI
+      userName={userName}
+      userAvatar={userAvatar}
+      className={className}
+      onEditProfile={handleEditProfile}
+      onCheckStats={handleCheckStats}
+    />
+  );
 };

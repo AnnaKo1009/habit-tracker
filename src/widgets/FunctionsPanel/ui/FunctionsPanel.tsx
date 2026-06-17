@@ -12,7 +12,7 @@ export const FunctionsPanelUI: FC<FunctionsPanelUIProps> = ({
     
     return (
         <div className={styles.panel}>
-            <AddHabitWidget onAdd={onAddHabit}/>
+            <AddHabitWidget onAdd={() => onAddHabit('Новая привычка')}/>
             <HabitCalendar onDateChange={onDateChange}/>
             <div className={styles.placeholder}>
                 {/* Здесь позже будет график статистики */}

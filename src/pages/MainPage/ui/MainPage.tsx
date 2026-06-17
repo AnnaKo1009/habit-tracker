@@ -7,11 +7,8 @@ import type { MainPageUIProps } from "./types";
 import styles from './MainPage.module.css'
 
 export const MainPageUI: FC<MainPageUIProps> = ({
-    userName,
-    userAvatar,
     habits,
     selectedDate,
-    onAddHabit,
     onEditHabit,
     onDeleteHabit,
     onToggleHabit,
@@ -32,9 +29,9 @@ export const MainPageUI: FC<MainPageUIProps> = ({
 
     return (
         <div className={styles.page}>
-            <Header variant='dashboard' userName={userName} userAvatar={userAvatar}/>
+            <Header variant='dashboard'/>
             <div className={styles.mainContent}>
-                <UserPanel userName={userName} userAvatar={userAvatar}/>
+                <UserPanel />
                 <div className={styles.habitsContainer}>
                     {filteredHabits.map(habit => (
                         <HabitCard 
@@ -52,7 +49,7 @@ export const MainPageUI: FC<MainPageUIProps> = ({
                         </div>
                     )}
                 </div>
-                <FunctionsPanel onAddHabit={ () => onAddHabit(prompt('Название привычки') || '')} onDateChange={onDateChange}/>
+                <FunctionsPanel onDateChange={onDateChange}/>
             </div>
         </div>
     )

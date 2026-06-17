@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta } from '@storybook/react';
 import { MainPageUI } from './MainPage';
 import { mockHabits } from '../../../mocks/habits';
 import { useState } from 'react';
@@ -17,12 +17,9 @@ export const Interactive = () => {
 
     return (
         <MainPageUI
-            userName="Анна"
-            userAvatar="https://doctor-veterinar.ru/images/mini-pig.png"
             habits={mockHabits}
             selectedDate={selectedDate}
             onDateChange={setSelectedDate}
-            onAddHabit={() => alert('Добавить привычку')}
             onEditHabit={(id) => alert(`Редактировать привычку ${id}`)}
             onDeleteHabit={(id) => alert(`Удалить привычку ${id}`)}
             onToggleHabit={(id) => alert(`Переключить привычку ${id}`)}

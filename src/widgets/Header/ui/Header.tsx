@@ -7,11 +7,11 @@ import { Avatar } from '../../../shared/ui/avatar';
 
 export const HeaderUI: FC<HeaderPropsUI> = ({
   variant,
-  userName,
-  userAvatar,
   onClick,
   className = "",
   now,
+  userName,  
+  userAvatar,
 }) => {
 
 

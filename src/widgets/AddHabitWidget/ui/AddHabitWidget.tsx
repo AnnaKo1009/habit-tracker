@@ -25,7 +25,7 @@ export const AddHabitWidgetUI: FC<AddHabitWidgetUIProps> = ({
           variant="icon"
           iconName="add"
           className={styles.addButton}
-          onClick={onAdd}
+          onClick={() => onAdd?.('Новая привычка')}
           size="medium"
         ></Button>
       </div>

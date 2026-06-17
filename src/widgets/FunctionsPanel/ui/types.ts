@@ -1,5 +1,5 @@
 export interface FunctionsPanelUIProps {
-    onAddHabit: () => void;
+    onAddHabit: (name: string) => void;
     onDateChange: (date: Date) => void;
     className?: string;
 }

@@ -1,5 +1,5 @@
 export interface AddHabitWidgetUIProps {
-    onAdd?: () => void;
+    onAdd?: (name: string) => void;
     className?: string;
     
 }
