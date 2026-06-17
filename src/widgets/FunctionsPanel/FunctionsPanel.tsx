@@ -14,7 +14,7 @@ export const FunctionsPanel: FC<FunctionsPanelProps> = ({
   onDateChange,
 }) => {
   const dispatch = useAppDispatch();
-  
+
   const handleAddHabit = useCallback(
     (name: string, startDate?: string) => {
       if (!name.trim()) return;
@@ -25,6 +25,8 @@ export const FunctionsPanel: FC<FunctionsPanelProps> = ({
         completedDates: [],
         createdAt: new Date().toISOString().split("T")[0],
         startDate: startDate || new Date().toISOString().split("T")[0],
+        frequency: 'daily' as const,      // ← пока по умолчанию
+        interval: 1,             // ← пока по умолчанию
       };
       dispatch(addHabit(newHabit));
     },

@@ -11,7 +11,7 @@ export const AddHabitWidget: FC<AddHabitWidgetProps> = ({
     onAdd, 
     className
 }) => {
-    return ( <AddHabitWidgetUI onAdd={() => onAddHabit('Новая привычка')} className={className}/>
+    return ( <AddHabitWidgetUI onAdd={onAdd} className={className}/>
 
     )
 

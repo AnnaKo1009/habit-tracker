@@ -8,6 +8,8 @@ interface Habit {
     completedDates: string[];
     createdAt: string;   
     startDate: string;
+    frequency: 'daily' | 'weekly' | 'custom';
+    interval?: number;
 }
 
 interface HabitsState {

@@ -8,14 +8,17 @@ export const mockHabits: Habit[] = [
         completedDates: ['2026-06-16', '2026-06-12', '2026-06-13'],
         createdAt: '2026-06-01',
         startDate: '2026-06-12',
+        frequency: 'daily',     
     },
     { 
         id: '2', 
         name: 'Зарядка', 
         completed: false, 
-        completedDates: ['2026-06-12', '2026-06-14'],
+        completedDates: ['2026-06-11', '2026-06-17'],
         createdAt: '2026-06-01',
         startDate: '2026-06-11',
+        frequency: 'custom', 
+        interval: 3,
     },
     { 
         id: '3', 
@@ -24,6 +27,7 @@ export const mockHabits: Habit[] = [
         completedDates: ['2026-06-10', '2026-06-11', '2026-06-13', '2026-06-14'],
         createdAt: '2026-06-05',
         startDate: '2026-06-10',
+        frequency: 'daily',
     },
     { 
         id: '4', 
@@ -32,6 +36,7 @@ export const mockHabits: Habit[] = [
         completedDates: ['2026-06-13', '2026-06-15', '2026-06-17'],
         createdAt: '2026-06-08',
         startDate: '2026-06-12',
+        frequency: 'weekly',
     },
     { 
         id: '5', 
@@ -40,14 +45,16 @@ export const mockHabits: Habit[] = [
         completedDates: ['2026-06-11', '2026-06-13'],
         createdAt: '2026-06-03',
         startDate: '2026-06-09',
+        frequency: 'daily',
     },
     { 
         id: '6', 
-        name: 'Изучать английский 20 минут', 
+        name: 'Изучать китайский 20 минут', 
         completed: false, 
         completedDates: ['2026-06-12', '2026-06-14'],
         createdAt: '2026-06-10',
         startDate: '2026-06-10',
+        frequency: 'daily',
     },
     { 
         id: '7', 
@@ -55,7 +62,8 @@ export const mockHabits: Habit[] = [
         completed: false, 
         completedDates: ['2026-06-11'],
         createdAt: '2026-06-02',
-        startDate: '2026-06-09',
+        startDate: '2026-06-11',
+        frequency: 'weekly',
     },
     { 
         id: '8', 
@@ -64,6 +72,7 @@ export const mockHabits: Habit[] = [
         completedDates: ['2026-06-17', '2026-06-11', '2026-06-12', '2026-06-13', '2026-06-14'],
         createdAt: '2026-06-09',
         startDate: '2026-06-09',
+        frequency: 'daily',
     },
     { 
         id: '9', 
@@ -72,6 +81,7 @@ export const mockHabits: Habit[] = [
         completedDates: ['2026-06-13', '2026-06-14'],
         createdAt: '2026-06-07',
         startDate: '2026-06-10',
+        frequency: 'daily',
     },
     { 
         id: '10', 
@@ -80,5 +90,6 @@ export const mockHabits: Habit[] = [
         completedDates: ['2026-06-10', '2026-06-12', '2026-06-14'],
         createdAt: '2026-06-01',
         startDate: '2026-06-08',
+        frequency: 'daily',
     },
 ];

@@ -5,6 +5,8 @@ export interface Habit {
     createdAt: string;
     startDate: string;
     completedDates: string[];
+    frequency: 'daily' | 'weekly' | 'custom';
+    interval?: number;
 
 }
 
