@@ -1,0 +1,76 @@
+.radioGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.radioGroup.horizontal {
+    flex-direction: row;
+    gap: 24px;
+}
+
+/* Контейнер одной радиокнопки */
+.radioContainer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* Скрываем нативный input */
+.radio {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+/* Кастомный кружок */
+.customRadio {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--button-primary-color, #334155);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+/* Внутренний кружок */
+.customRadio::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: all 0.2s ease;
+}
+
+.customRadio.checked {
+    border-color: var(--button-hover-color, #14B8A6);
+}
+
+.customRadio.checked::after {
+    background-color: var(--button-hover-color, #14B8A6);
+} 
+
+/* Состояние hover */
+.radioContainer:hover .customRadio {
+    border-color: var(--button-hover-color, #14B8A6);
+}
+
+.radio:focus-visible + .customRadio {
+    outline: 2px solid var(--button-hover-color, #14B8A6);
+    outline-offset: 2px;
+}
+
+.label {
+    font-family: var(--font-family);
+    font-size: 16px;
+    color: var(--text-primary, #1E293B);
+    cursor: pointer;
+    user-select: none;
+}
