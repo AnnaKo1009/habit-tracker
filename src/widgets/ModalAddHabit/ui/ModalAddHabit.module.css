@@ -1,0 +1,38 @@
+
+.addHabitContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.intervalInput {
+    width: 100%;
+    padding: 21px 12px;
+    border: none;
+    border-radius: 12px;
+    font-family: var(--font-family);
+    font-size: var(--font-size-text);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-text);
+    background-color: white;
+    outline: none;
+    border: 1px solid #E2E8F0;
+    box-sizing: border-box;
+}
+
+.intervalInput::placeholder {
+    color: #94A3B8;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 8px;
+}
+
+.actions button {
+    flex: 1;
+}
