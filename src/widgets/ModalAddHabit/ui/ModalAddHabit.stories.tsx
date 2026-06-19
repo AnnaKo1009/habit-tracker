@@ -3,7 +3,7 @@ import { ModalAddHabitUI } from './ModalAddHabit';
 import { useState } from 'react';
 
 const meta = {
-    title: 'Widgets/ModalAddHabit',
+    title: 'Widgets/ModalAddHabitUI',
     component: ModalAddHabitUI,
     tags: ['autodocs'],
 } satisfies Meta<typeof ModalAddHabitUI>;

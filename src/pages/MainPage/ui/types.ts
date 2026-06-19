@@ -7,4 +7,7 @@ export interface MainPageUIProps {
     onDeleteHabit: (id: string) => void;
     onToggleHabit: (id: string, date: string) => void;
     onDateChange: (date: Date) => void; 
+    isAddModalOpen: boolean;
+    onOpenAddModal: () => void;
+    onCloseAddModal: () => void;
 }

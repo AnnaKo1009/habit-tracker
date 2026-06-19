@@ -10,7 +10,9 @@ export const MainPage = () => {
     const userName = useAppSelector((state) => state.user.name);
     const userAvatar = useAppSelector((state) => state.user.avatar);
 
+
     const [selectedDate, setSelectedDate] = useState(new Date());
+    const [isAddModalOpen, setIsAddModalOpen] = useState(false);
 
     const handleDeleteHabit = useCallback((id: string) => {
         dispatch(deleteHabit(id))
@@ -37,6 +39,9 @@ export const MainPage = () => {
           onDeleteHabit={handleDeleteHabit}
           onToggleHabit={handleToggleHabit}
           onDateChange={handleDateChange}
+          isAddModalOpen={isAddModalOpen}
+          onOpenAddModal={() => setIsAddModalOpen(true)}
+          onCloseAddModal={() => setIsAddModalOpen(false)}
 
           />
 

@@ -3,6 +3,7 @@ import { Header } from "../../../widgets/Header";
 import { UserPanel } from "../../../widgets/UserPanel";
 import { HabitCard } from "../../../widgets/HabitCard";
 import { FunctionsPanel } from "../../../widgets/FunctionsPanel";
+import { ModalAddHabit } from "../../../widgets/ModalAddHabit/ModalAddHabit";
 import type { MainPageUIProps } from "./types";
 import styles from "./MainPage.module.css";
 import type { Habit } from "../../../widgets/HabitCard/ui/types";
@@ -14,6 +15,9 @@ export const MainPageUI: FC<MainPageUIProps> = ({
   onDeleteHabit,
   onToggleHabit,
   onDateChange,
+  isAddModalOpen,
+  onOpenAddModal,
+  onCloseAddModal,
 }) => {
   const selectedDateString = selectedDate.toLocaleDateString("en-CA");
 
@@ -74,7 +78,8 @@ export const MainPageUI: FC<MainPageUIProps> = ({
             </div>
           )}
         </div>
-        <FunctionsPanel onDateChange={onDateChange} />
+        <FunctionsPanel onDateChange={onDateChange} onAddHabit={onOpenAddModal} />
+        <ModalAddHabit isOpen={isAddModalOpen} onClose={onCloseAddModal}/>
       </div>
     </div>
   );

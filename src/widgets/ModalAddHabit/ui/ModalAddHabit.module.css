@@ -4,13 +4,13 @@
     flex-direction: column;
     gap: 16px;
     width: 100%;
-    max-width: 400px;
+    padding: 8px;
 }
 
 .intervalInput {
     width: 100%;
     padding: 21px 12px;
-    border: none;
+    border: 1px solid #e0e0e0;
     border-radius: 12px;
     font-family: var(--font-family);
     font-size: var(--font-size-text);
@@ -26,6 +26,31 @@
     color: #94A3B8;
 }
 
+.dateInput {
+    width: 100%;
+    padding: 21px 12px;
+    border: none;
+    border-radius: 12px;
+    font-family: var(--font-family);
+    font-size: var(--font-size-text);
+    background-color: white;
+    outline: none;
+    border: 1px solid #E2E8F0;
+    color: var(--text-primary);
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.dateInput::-webkit-datetime-edit-text {
+    color: #94A3B8;
+}
+
+/* Стиль для иконки календаря (Webkit) */
+.dateInput::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(0.5);
+}
+
 .actions {
     display: flex;
     gap: 12px;
@@ -35,4 +60,20 @@
 
 .actions button {
     flex: 1;
+}
+
+.buttonSection {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 16px;
+    width: 100%;
+}
+
+.buttonSection button {
+    flex: 1;               /* одинаковые кнопки */
+}
+
+.text {
+    font-weight: var(--font-weight-medium);
 }

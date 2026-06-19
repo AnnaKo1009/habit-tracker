@@ -7,37 +7,20 @@ import { addHabit } from "../../store/habitsSlice";
 export interface FunctionsPanelProps {
   className?: string;
   onDateChange: (date: Date) => void;
+  onAddHabit: () => void;
 }
 
 export const FunctionsPanel: FC<FunctionsPanelProps> = ({
   className,
   onDateChange,
+  onAddHabit,
 }) => {
-  const dispatch = useAppDispatch();
-
-  const handleAddHabit = useCallback(
-    (name: string, startDate?: string) => {
-      if (!name.trim()) return;
-      const newHabit = {
-        id: crypto.randomUUID(),
-        name: name.trim(),
-        completed: false,
-        completedDates: [],
-        createdAt: new Date().toISOString().split("T")[0],
-        startDate: startDate || new Date().toISOString().split("T")[0],
-        frequency: 'daily' as const,      // ← пока по умолчанию
-        interval: 1,             // ← пока по умолчанию
-      };
-      dispatch(addHabit(newHabit));
-    },
-    [dispatch],
-  );
 
   return (
     <FunctionsPanelUI
       className={className}
-      onAddHabit={handleAddHabit}
       onDateChange={onDateChange}
+      onAddHabit={onAddHabit}
     />
   );
 };

@@ -32,17 +32,20 @@ export const ModalAddHabitUI: FC<ModalAddHabitUIProps> = ({
 
 
     return (
-        <Modal isOpen={isOpen} onClose={onClose} title='Новая привычка'>
+        <Modal isOpen={isOpen} onClose={onClose} title='Добавление новой привычки'>
         <div className={styles.addHabitContainer}>
           <Input value={name} onChange={(e) => setName(e.target.value)} placeholder='Введите новую привычку'/>
-          <input type="date" value={startDate.toISOString().split('T')[0]} onChange={(e) => setStartDate(new Date(e.target.value))}/>
+          <span className={styles.text}>Выберите дату начала привычки</span>
+          <input type="date" value={startDate.toISOString().split('T')[0]} onChange={(e) => setStartDate(new Date(e.target.value))} className={styles.dateInput}/>
+          <span className={styles.text}>Выберите частоту повторения привычки</span>
           <RadioGroup name='frequency' options={frequencyOptions} value={frequency} onChange={setFrequency}/>
           {frequency === 'custom' && ( 
-            <input value={interval} onChange={(e) => setInterval(e.target.value)} placeholder='введите интервал' className={styles.intervalInput}/>
+            <input value={interval} onChange={(e) => setInterval(e.target.value)} placeholder='Введите интервал' className={styles.intervalInput}/>
           )}
+          <div className={styles.buttonSection}>
           <Button variant='secondary' onClick={onClose}>Отменить</Button>
-          <Button variant ='primary' onClick={onSubmit}>Сохранить</Button>
-         
+          <Button variant ='primary' onClick={onSubmit} disabled={!name.trim()}>Сохранить</Button>
+         </div>
         </div>
         </Modal>
     )
