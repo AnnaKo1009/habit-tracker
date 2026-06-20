@@ -7,17 +7,21 @@ import { ModalAddHabit } from "../../../widgets/ModalAddHabit/ModalAddHabit";
 import type { MainPageUIProps } from "./types";
 import styles from "./MainPage.module.css";
 import type { Habit } from "../../../widgets/HabitCard/ui/types";
+import { ModalEditHabit } from "../../../widgets/ModalEditHabit";
 
 export const MainPageUI: FC<MainPageUIProps> = ({
   habits,
   selectedDate,
-  onEditHabit,
   onDeleteHabit,
   onToggleHabit,
   onDateChange,
   isAddModalOpen,
   onOpenAddModal,
   onCloseAddModal,
+  isEditModalOpen,
+  onOpenEditModal,
+  onCloseEditModal, 
+  editingHabit,
 }) => {
   const selectedDateString = selectedDate.toLocaleDateString("en-CA");
 
@@ -65,8 +69,8 @@ export const MainPageUI: FC<MainPageUIProps> = ({
               key={habit.id}
               habit={habit}
               selectedDate={selectedDate}
-              onEdit={(id) =>
-                onEditHabit(id, prompt("Новое название") || habit.name)
+              onEdit={() =>
+                onOpenEditModal(habit)
               }
               onDelete={onDeleteHabit}
               onToggle={(id) => onToggleHabit(id, selectedDateString)}
@@ -80,6 +84,9 @@ export const MainPageUI: FC<MainPageUIProps> = ({
         </div>
         <FunctionsPanel onDateChange={onDateChange} onAddHabit={onOpenAddModal} />
         <ModalAddHabit isOpen={isAddModalOpen} onClose={onCloseAddModal}/>
+        { editingHabit &&
+        <ModalEditHabit isOpen={isEditModalOpen} onClose={onCloseEditModal} habit={editingHabit}/>
+}
       </div>
     </div>
   );

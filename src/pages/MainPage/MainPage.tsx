@@ -2,6 +2,7 @@ import { useCallback, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks"
 import { MainPageUI } from "./ui";
 import { deleteHabit, editHabit, toggleHabitDate } from "../../store/habitsSlice";
+import type { Habit } from "../../widgets/HabitCard/ui/types";
 
 
 export const MainPage = () => {
@@ -14,13 +15,21 @@ export const MainPage = () => {
     const [selectedDate, setSelectedDate] = useState(new Date());
     const [isAddModalOpen, setIsAddModalOpen] = useState(false);
 
+    const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+    const [editingHabit, setEditingHabit] = useState<Habit | null>(null);
+
+    const handleEditHabit = (habit: Habit) => {
+        setEditingHabit(habit);
+        setIsEditModalOpen(true);
+    }
+
+    const handleCloseEditModal = () => {
+        setIsEditModalOpen(false);
+        setEditingHabit(null);
+    }
+
     const handleDeleteHabit = useCallback((id: string) => {
         dispatch(deleteHabit(id))
-    }, [dispatch])
-
-    const handleEditHabit = useCallback((id: string, newName: string) => {
-        if (!newName.trim()) return;
-        dispatch(editHabit({id, name: newName.trim()}));
     }, [dispatch])
 
     const handleToggleHabit = useCallback((id: string, date: string) => {
@@ -35,13 +44,17 @@ export const MainPage = () => {
         <MainPageUI
           habits={habits}
           selectedDate={selectedDate}
-          onEditHabit={handleEditHabit}
           onDeleteHabit={handleDeleteHabit}
           onToggleHabit={handleToggleHabit}
           onDateChange={handleDateChange}
           isAddModalOpen={isAddModalOpen}
           onOpenAddModal={() => setIsAddModalOpen(true)}
           onCloseAddModal={() => setIsAddModalOpen(false)}
+          isEditModalOpen={isEditModalOpen}
+          editingHabit={editingHabit}
+          onOpenEditModal={handleEditHabit}
+          onCloseEditModal={handleCloseEditModal}
+
 
           />
 

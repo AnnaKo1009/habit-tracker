@@ -2,21 +2,22 @@ import { useAppDispatch } from "../../hooks/hooks";
 import { editHabit } from "../../store/habitsSlice";
 import type { Habit } from "../HabitCard/ui/types";
 import { useState, type FC } from 'react';
+import { ModalEditHabitUI } from "./ui/ModalEditHabit";
 
-export interface ModalEditHabit {
+export interface ModalEditHabitProps {
     isOpen: boolean;
     onClose: () => void;
     habit: Habit;
 }
 
-export const ModalEditHabit: FC<ModalEditHabit> = ({
+export const ModalEditHabit: FC<ModalEditHabitProps> = ({
     isOpen,
     onClose,
     habit
 }) => {
     const [name, setName] = useState(habit.name);
     const [startDate, setStartDate] = useState(new Date (habit.startDate));
-    const [ frequency, setFrequency] = useState(habit.frequency);
+    const [frequency, setFrequency] = useState<string>(habit.frequency);
     const [interval, setInterval] = useState(String(habit.interval || 1));
 
     const dispatch = useAppDispatch();
@@ -37,7 +38,7 @@ export const ModalEditHabit: FC<ModalEditHabit> = ({
 
     }
     return (
-    <ModalEditHabitUI 
+    <ModalEditHabitUI
         isOpen={isOpen} 
         onClose={onClose}
         name={name}

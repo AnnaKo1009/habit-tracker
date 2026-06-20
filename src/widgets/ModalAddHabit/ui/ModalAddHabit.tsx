@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { type FC } from 'react';
 import type { ModalAddHabitUIProps } from './types';
 import styles from './ModalAddHabit.module.css';

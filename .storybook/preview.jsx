@@ -1,4 +1,7 @@
 import '../src/index.css'; 
+import React from 'react';
+import { Provider } from 'react-redux';
+import { store } from '../src/store/store';
 
 /** @type { import('@storybook/react-vite').Preview } */
 const preview = {
@@ -17,6 +20,13 @@ const preview = {
       test: "todo"
     }
   },
+  decorators: [
+    (Story) => (
+      <Provider store={store}>
+        <Story />
+      </Provider>
+    ),
+  ],
 };
 
 export default preview;

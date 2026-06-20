@@ -1,0 +1,51 @@
+.editContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+}
+
+.dateInput {
+    width: 100%;
+    padding: 21px 12px;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    font-family: var(--font-family);
+    font-size: var(--font-size-text);
+    background-color: white;
+    outline: none;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.intervalInput {
+    width: 100%;
+    padding: 21px 12px;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    font-family: var(--font-family);
+    font-size: var(--font-size-text);
+    background-color: white;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.intervalInput::placeholder {
+    color: #94A3B8;
+}
+
+.buttonSection {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 16px;
+    width: 100%;
+}
+
+.buttonSection button {
+    flex: 1;
+}

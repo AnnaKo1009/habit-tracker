@@ -10,15 +10,92 @@
      align-items: flex-start; 
     justify-content: space-between;
     padding: 20px 15px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.mainContent > :first-child {
+    flex: 0 1 auto; 
+    min-width: 200px;
 }
 
 .habitsContainer {
     background-color: white;
-    padding: 50px;
-    width: 60%;
+    padding: 40px;
+    flex: 1 1 300px;         
+    min-width: 250px;  
     border-radius: var(--border-radius-primary);
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
 
+
+.mainContent > :last-child {
+    flex: 0 1 auto;  
+    min-width: 200px;
+}
+
+
+
+@media (max-width: 1200px) {
+    .mainContent {
+        gap: 16px;
+        padding: 16px 12px;
+    }
+
+    .mainContent > :first-child {
+        flex: 0 0 240px;
+    }
+
+    .mainContent > :last-child {
+        flex: 0 0 340px;
+    }
+
+    .habitsContainer {
+        padding: 30px;
+        min-width: 200px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .mainContent {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        padding: 12px;
+    }
+
+    .mainContent > :first-child {
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .habitsContainer {
+        flex: 1 1 auto;
+        width: 100%;
+        padding: 24px;
+        min-width: 0;
+    }
+
+    .mainContent > :last-child {
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .habitsContainer {
+        padding: 16px;
+    }
+
+    .mainContent {
+        padding: 8px;
+        gap: 12px;
+    }
 }
