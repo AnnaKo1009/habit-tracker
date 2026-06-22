@@ -56,6 +56,14 @@ export const MainPageUI: FC<MainPageUIProps> = ({
     shouldShowHabit(habit, selectedDateString)
 );
   
+const uncompleted = filteredHabits.filter(
+  habit => !habit.completedDates.includes(selectedDateString)
+);
+
+const completed = filteredHabits.filter(
+  habit => habit.completedDates.includes(selectedDateString)
+);
+
 
 
   return (
@@ -64,7 +72,7 @@ export const MainPageUI: FC<MainPageUIProps> = ({
       <div className={styles.mainContent}>
         <UserPanel />
         <div className={styles.habitsContainer}>
-          {filteredHabits.map((habit) => (
+          {uncompleted.map((habit) => (
             <HabitCard
               key={habit.id}
               habit={habit}
@@ -76,6 +84,19 @@ export const MainPageUI: FC<MainPageUIProps> = ({
               onToggle={(id) => onToggleHabit(id, selectedDateString)}
             />
           ))}
+          {completed.map((habit) => (
+            <HabitCard
+              key={habit.id}
+              habit={habit}
+              selectedDate={selectedDate}
+              onEdit={() =>
+                onOpenEditModal(habit)
+              }
+              onDelete={onDeleteHabit}
+              onToggle={(id) => onToggleHabit(id, selectedDateString)}
+            />
+          ))}
+
           {filteredHabits.length === 0 && (
             <div className={styles.emptyMessage}>
               Нет привычек на выбранную дату
@@ -91,3 +112,5 @@ export const MainPageUI: FC<MainPageUIProps> = ({
     </div>
   );
 };
+
+

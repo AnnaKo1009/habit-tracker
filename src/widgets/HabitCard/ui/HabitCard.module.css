@@ -6,10 +6,23 @@
   padding: 38px 38px;
   border-radius: var(--border-radius-primary);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.4s ease;
   background-color: var(--background-color);
   gap: 16px;
+  opacity: 1;
+  transform: translateX(0);
+  max-height: 200px;
+  padding: 38px 38px;
 } 
+
+.card.exiting {
+  opacity: 0;
+  transform: translateX(100px);
+  max-height: 0;
+  padding: 0 38px;
+  overflow: hidden;
+  margin: 0;
+}
 
   .title {
   flex: 1;

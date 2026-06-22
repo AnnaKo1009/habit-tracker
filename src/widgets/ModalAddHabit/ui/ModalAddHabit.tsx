@@ -1,10 +1,11 @@
-import { type FC } from 'react';
+import { useState, type FC } from 'react';
 import type { ModalAddHabitUIProps } from './types';
 import styles from './ModalAddHabit.module.css';
 import { Input } from '../../../shared/ui/input';
 import { Button } from '../../../shared/ui/button';
 import { RadioGroup } from '../../../shared/ui/radio';
 import { Modal } from '../../../shared/ui/modal';
+import { validateHabitName } from '../../../utils/validation';
 
 const frequencyOptions = [
     { value: 'daily', label: 'Каждый день' },
@@ -28,12 +29,24 @@ export const ModalAddHabitUI: FC<ModalAddHabitUIProps> = ({
 
 }) => {
 
+const [error, setError] = useState('');
 
+const handleSubmit = () => {
+    const errorMessage = validateHabitName(name);
+    if (errorMessage) {
+        setError(errorMessage);
+        return;
+    }
+
+    setError('');
+    onSubmit();
+}
 
     return (
         <Modal isOpen={isOpen} onClose={onClose} title='Добавление новой привычки'>
         <div className={styles.addHabitContainer}>
           <Input value={name} onChange={(e) => setName(e.target.value)} placeholder='Введите новую привычку'/>
+          {error && <span className={styles.error}>{error}</span>}
           <span className={styles.text}>Выберите дату начала привычки</span>
           <input type="date" value={startDate.toISOString().split('T')[0]} onChange={(e) => setStartDate(new Date(e.target.value))} className={styles.dateInput}/>
           <span className={styles.text}>Выберите частоту повторения привычки</span>
@@ -43,7 +56,7 @@ export const ModalAddHabitUI: FC<ModalAddHabitUIProps> = ({
           )}
           <div className={styles.buttonSection}>
           <Button variant='secondary' onClick={onClose}>Отменить</Button>
-          <Button variant ='primary' onClick={onSubmit} disabled={!name.trim()}>Сохранить</Button>
+          <Button variant ='primary' onClick={handleSubmit} disabled={!name.trim()}>Сохранить</Button>
          </div>
         </div>
         </Modal>

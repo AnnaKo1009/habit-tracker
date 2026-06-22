@@ -77,3 +77,12 @@
 .text {
     font-weight: var(--font-weight-medium);
 }
+
+.error {
+    color: #EF4444;
+    font-size: 14px;
+    margin-top: 4px;
+    padding: 4px 8px;
+    background-color: #FEE2E2;
+    border-radius: 6px;
+}

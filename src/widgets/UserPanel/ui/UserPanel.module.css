@@ -9,6 +9,9 @@
     border-radius: var(--border-radius-primary);
     width: 100%;
     max-width: 280px;
+
+    position: sticky;
+    top: 0;
 }
 
 .name {
