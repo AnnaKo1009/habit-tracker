@@ -6,8 +6,9 @@ import { FunctionsPanel } from "../../../widgets/FunctionsPanel";
 import { ModalAddHabit } from "../../../widgets/ModalAddHabit/ModalAddHabit";
 import type { MainPageUIProps } from "./types";
 import styles from "./MainPage.module.css";
-import type { Habit } from "../../../widgets/HabitCard/ui/types";
+import { shouldShowHabit } from "../../../utils/habitHelpers";
 import { ModalEditHabit } from "../../../widgets/ModalEditHabit";
+
 
 export const MainPageUI: FC<MainPageUIProps> = ({
   habits,
@@ -28,30 +29,6 @@ export const MainPageUI: FC<MainPageUIProps> = ({
   // НИЖЕ dateString — это ДЕНЬ В КАЛЕНДАРЕ, который смотрит пользователь
   // habit.startDate — это ДАТА НАЧАЛА привычки
 
-  const shouldShowHabit = (habit: Habit, dateString: string): boolean => {
-    if (habit.startDate > dateString) return false;
-
-    if (habit.completedDates.includes(dateString)) return true;
-
-    const startDate = new Date(habit.startDate + "T00:00:00");
-    const currentDate = new Date(dateString + "T00:00:00");
-    const daysDiff = Math.floor(
-      (currentDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24),
-    );
-
-    switch (habit.frequency) {
-      case "daily":
-        return true;
-      case "weekly":
-        return daysDiff % 7 === 0;
-      case "custom":
-        const interval = habit.interval;
-        if (!interval) return false; 
-        return daysDiff % interval === 0;
-      default:
-        return true;
-    }
-  };
   const filteredHabits = habits.filter((habit) => 
     shouldShowHabit(habit, selectedDateString)
 );
@@ -63,7 +40,6 @@ const uncompleted = filteredHabits.filter(
 const completed = filteredHabits.filter(
   habit => habit.completedDates.includes(selectedDateString)
 );
-
 
 
   return (
@@ -103,7 +79,7 @@ const completed = filteredHabits.filter(
             </div>
           )}
         </div>
-        <FunctionsPanel onDateChange={onDateChange} onAddHabit={onOpenAddModal} />
+        <FunctionsPanel onDateChange={onDateChange} onAddHabit={onOpenAddModal} selectedDate={selectedDate} />
         <ModalAddHabit isOpen={isAddModalOpen} onClose={onCloseAddModal}/>
         { editingHabit &&
         <ModalEditHabit isOpen={isEditModalOpen} onClose={onCloseEditModal} habit={editingHabit}/>

@@ -1,73 +1,64 @@
-.page {
-    background-color: var(--background-color);
-    width: 100%;
-    height: 100vh;          
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-
-}
-
 .mainContent {
     display: flex;
     flex-direction: row;
-     align-items: flex-start; 
-    justify-content: space-between;
-    padding: 20px 15px;
-    gap: 10px;
-    flex-wrap: wrap;flex: 1;                 /* ← занимает всё оставшееся место */
-    overflow: hidden;        /* ← отключаем прокрутку контейнера */
-    height: 100%;
+    align-items: stretch;
+    gap: 24px;
+    padding: 20px 24px;
+    background-color: var(--background-color);
 }
 
+
 .mainContent > :first-child {
-    flex: 0 1 auto; 
-    min-width: 200px;
+    flex: 0 0 auto;
+    width: 240px;
+    align-self: flex-start;
 }
+
 
 .habitsContainer {
     background-color: white;
     padding: 40px;
-    flex: 1 1 300px;         
-    min-width: 250px;  
+    flex: 1;
+    min-width: 250px;
     border-radius: var(--border-radius-primary);
     display: flex;
     flex-direction: column;
     gap: 10px;
-    height: 100%;            /* ← занимает всю высоту */
-    overflow-y: auto;        /* ← прокрутка здесь */
-
+    
+    /* для прокрутки */
+    height: 100%;
+    max-height: 900px;         
+    overflow-y: auto;          
 }
 
 
 .mainContent > :last-child {
-    flex: 0 1 auto;  
-    min-width: 200px;
+    flex: 0 0 auto;
+    width: 340px;
+    align-self: stretch;
 }
 
+/* АДАПТИВНОСТЬ */
 
-
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
     .mainContent {
         gap: 16px;
-        padding: 16px 12px;
+        padding: 16px;
     }
 
     .mainContent > :first-child {
-        flex: 0 0 240px;
+        width: 200px;
     }
 
     .mainContent > :last-child {
-        flex: 0 0 340px;
+        width: 300px;
     }
 
     .habitsContainer {
-        padding: 30px;
-        min-width: 200px;
+        padding: 24px;
+        max-height: 500px;
     }
 }
-
-
 
 @media (max-width: 768px) {
     .mainContent {
@@ -77,30 +68,24 @@
         padding: 12px;
     }
 
-    .mainContent > :first-child {
-        flex: 1 1 auto;
+    .mainContent > :first-child,
+    .mainContent > :last-child {
         width: 100%;
-        max-width: 100%;
+        align-self: stretch;
     }
 
     .habitsContainer {
-        flex: 1 1 auto;
-        width: 100%;
+        max-height: 400px;
         padding: 24px;
         min-width: 0;
-    }
-
-    .mainContent > :last-child {
-        flex: 1 1 auto;
         width: 100%;
-        max-width: 100%;
     }
 }
-
 
 @media (max-width: 480px) {
     .habitsContainer {
         padding: 16px;
+        max-height: 300px;
     }
 
     .mainContent {

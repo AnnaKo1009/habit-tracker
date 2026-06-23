@@ -8,12 +8,14 @@ export interface FunctionsPanelProps {
   className?: string;
   onDateChange: (date: Date) => void;
   onAddHabit: () => void;
+  selectedDate: Date;
 }
 
 export const FunctionsPanel: FC<FunctionsPanelProps> = ({
   className,
   onDateChange,
   onAddHabit,
+  selectedDate,
 }) => {
 
   return (
@@ -21,6 +23,7 @@ export const FunctionsPanel: FC<FunctionsPanelProps> = ({
       className={className}
       onDateChange={onDateChange}
       onAddHabit={onAddHabit}
+      selectedDate={selectedDate}
     />
   );
 };
