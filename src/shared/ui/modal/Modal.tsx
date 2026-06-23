@@ -2,6 +2,7 @@ import React from "react";
 import type { ModalProps } from "./types";
 import { Button } from "../button";
 import styles from "./Modal.module.css";
+import { createPortal } from "react-dom";
 
 export const Modal: React.FC<ModalProps> = ({
   children,
@@ -18,7 +19,7 @@ export const Modal: React.FC<ModalProps> = ({
     }
   };
 
-  return (
+  return createPortal (
     <div className={styles.overlay} onClick={handleOverlayClick}>
       <div title={title} className={`${styles.modal} ${className}`}>
         <div className={styles.header}>
@@ -33,6 +34,7 @@ export const Modal: React.FC<ModalProps> = ({
         </div>
         <div className={styles.content}>{children}</div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };

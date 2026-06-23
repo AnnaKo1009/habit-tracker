@@ -52,6 +52,12 @@ export const StatisticsWidgetUI: FC<StatisticsWidgetUIProps> = ({
                             <span>Осталось: {uncompleted}</span>
                         </div>
                     </div>
+                    {uncompleted === 0 && <hr className={styles.divider} />}
+                    { uncompleted === 0 && (
+                            <div className={styles.congrats}>
+                            <span >Вы выполнили все на сегодня!</span>
+                            </div>
+                        )}
                 </div>
             )}
         </div>
