@@ -1,0 +1,50 @@
+.page {
+    background-color: var(--background-color);
+    min-height: 100vh;
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+}
+
+
+.actionsPanel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;                    
+    padding: 34px 40px;          
+    min-width: 200px;
+    width: fit-content;           
+    height: fit-content;          
+    background-color: white;
+    border-radius: var(--border-radius-primary);
+    align-self: flex-start;      
+}
+
+.profileInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;                      
+    padding: 20px 40px;
+    min-width: 700px;             
+    margin: 0 auto;  
+    /* background-color: white;
+    border-radius: var(--border-radius-primary); */
+}
+
+
+.buttonSection {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.buttonSection button {
+    flex: 1;
+}

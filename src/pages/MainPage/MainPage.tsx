@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks"
 import { MainPageUI } from "./ui";
-import { deleteHabit, editHabit, toggleHabitDate } from "../../store/habitsSlice";
+import { deleteHabit, toggleHabitDate } from "../../store/habitsSlice";
 import type { Habit } from "../../widgets/HabitCard/ui/types";
 
 

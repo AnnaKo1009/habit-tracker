@@ -8,7 +8,7 @@ import { StatisticsWidget } from '../../StatisticsWidget/StatisticsWidget';
 export const FunctionsPanelUI: FC<FunctionsPanelUIProps> = ({
     onAddHabit,
     onDateChange, 
-    selectedDate
+    selectedDate,
 }) => {
 
     

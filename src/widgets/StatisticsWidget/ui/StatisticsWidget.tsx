@@ -8,6 +8,7 @@ const COLORS = ['#14B8A6', '#E2E8F0'];
 export const StatisticsWidgetUI: FC<StatisticsWidgetUIProps> = ({
     completed,
     uncompleted,
+    selectedDate,
 }) => {
 
     const data = [
@@ -16,12 +17,17 @@ export const StatisticsWidgetUI: FC<StatisticsWidgetUIProps> = ({
     ];
 
     const total = completed + uncompleted;
+    
+    const formattedDate = selectedDate.toLocaleDateString('ru-RU', {
+        day: 'numeric',
+        month: 'long'
+    });
 
     return (
         <div className={styles.container}>
-            <h3 className={styles.title}>Статистика на сегодня</h3>
+            <h3 className={styles.title}>Статистика на {formattedDate}</h3>
             { total === 0 ? (
-                <p className={styles.empty}>Нет привычек на сегодня</p>
+                <p className={styles.empty}>Нет привычек на выбранную дату</p>
             ): (
                 <div className={styles.content}>
                     <ResponsiveContainer width={150} height={150}>
@@ -55,7 +61,7 @@ export const StatisticsWidgetUI: FC<StatisticsWidgetUIProps> = ({
                     {uncompleted === 0 && <hr className={styles.divider} />}
                     { uncompleted === 0 && (
                             <div className={styles.congrats}>
-                            <span >Вы выполнили все на сегодня!</span>
+                            <span >Вы выполнили все на {formattedDate}! </span>
                             </div>
                         )}
                 </div>

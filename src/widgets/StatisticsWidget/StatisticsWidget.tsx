@@ -27,6 +27,7 @@ export const StatisticsWidget = ({ selectedDate, className }: StatisticsWidgetPr
         completed={completed}
         uncompleted={uncompleted}
         className={className}
+        selectedDate={selectedDate}
         />
     )
 
