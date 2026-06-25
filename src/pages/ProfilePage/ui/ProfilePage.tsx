@@ -18,6 +18,7 @@ export const ProfilePageUI: FC<ProfilePageUIProps> = ({
   const [avatar, setAvatar] = useState(user.avatar);
   const [email, setEmail] = useState(user.email);
   const [birthDate, setBirthDate] = useState(user.birthDate);
+  const [password, setPassword] = useState(user.password);
 
     const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -38,7 +39,7 @@ export const ProfilePageUI: FC<ProfilePageUIProps> = ({
     }
 
   const handleSubmit = () => {
-    onSubmit({ name, avatar, email, birthDate });
+    onSubmit({ name, avatar, email, birthDate, password });
   };
 
   return (
@@ -58,6 +59,7 @@ export const ProfilePageUI: FC<ProfilePageUIProps> = ({
           </Button>
         </div>
         <div className={styles.profileInfo}>
+          <div className={styles.avatarContainer}>
           <input
             type="file"
             ref={fileInputRef}
@@ -73,32 +75,53 @@ export const ProfilePageUI: FC<ProfilePageUIProps> = ({
               onClick={handleEditAvatarClick}
             />
           </Avatar>
+          </div>
+          <div className={styles.changesContainer}>
+          <div className={styles.inputContainer}>
+            <div className={styles.field}>
+            <span className={styles.label}>Имя пользователя</span>
           <Input
             value={name}
             onChange={(e) => setName(e.target.value)}
             className={styles.input}
           />
+          </div>
+          <div className={styles.field}>
+            <span className={styles.label}>Дата рождения</span>
           <input
             type="date"
             value={birthDate}
             onChange={(e) => setBirthDate(e.target.value)}
             className={styles.input}
           />
+          </div>
+          <div className={styles.field}>
+            <span className={styles.label}>Email</span>
           <Input
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className={styles.input}
           />
+          </div>
+          <div className={styles.field}>
+            <span className={styles.label}>Пароль</span>
+          <Input
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className={styles.input}
+          />
+          </div>
+          </div>
+          </div>
           <div className={styles.buttonSection}>
-            <Button variant="secondary" onClick={onBack}>
-              Отмена / Назад{" "}
+            <Button variant="secondary" onClick={onBack}>Назад
             </Button>
             <Button variant="primary" onClick={handleSubmit}>
               Сохранить
             </Button>
           </div>
+          </div>
         </div>
       </div>
-    </div>
   );
 };

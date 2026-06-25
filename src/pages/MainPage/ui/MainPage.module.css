@@ -10,7 +10,7 @@
 
 .mainContent > :first-child {
     flex: 0 0 auto;
-    width: 240px;
+    width: 280px;
     align-self: flex-start;
 }
 

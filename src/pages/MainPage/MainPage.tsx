@@ -54,8 +54,6 @@ export const MainPage = () => {
           editingHabit={editingHabit}
           onOpenEditModal={handleEditHabit}
           onCloseEditModal={handleCloseEditModal}
-
-
           />
 
     )

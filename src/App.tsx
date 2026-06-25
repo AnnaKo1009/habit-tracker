@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route  } from "react-router-dom";
 import { MainPage } from './pages/MainPage/MainPage';
+import { ProfilePage } from "./pages/ProfilePage/ProfilePage";
 
 
 
@@ -8,6 +9,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<MainPage/>}/>
+            <Route path="/profile" element={<ProfilePage/>}/>
           </Routes>
         </BrowserRouter>
     )

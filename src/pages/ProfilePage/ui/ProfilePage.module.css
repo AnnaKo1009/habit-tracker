@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: row;
     padding: 40px;
+    gap: 54px;
 }
 
 
@@ -26,25 +27,67 @@
 .profileInfo {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 16px;                      
-    padding: 20px 40px;
-    min-width: 700px;             
-    margin: 0 auto;  
-    /* background-color: white;
-    border-radius: var(--border-radius-primary); */
+    flex: 1;
+    padding: 40px;
+    background-color: white;
+    border-radius: var(--border-radius-primary);
 }
 
+.avatarContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
 
 .buttonSection {
     display: flex;
     gap: 12px;
-    margin-top: 16px;
+    margin-top: 24px;
     width: 100%;
     max-width: 400px;
+    margin: 24px auto 0; 
 }
 
 .buttonSection button {
     flex: 1;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    max-width: 600px; 
+    margin: 0 auto;        
+}
+
+.input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    font-family: var(--font-family);
+    font-size: 16px;
+    background-color: white;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.input[type="date"] {
+    padding: 16px 18px;
+    border-radius: 12px;
+    font-size: var(--font-size-text);
+    color: var(--input-color);
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+.label {
+    font-size: var(--font-size-text);
+    font-weight: 500;
 }

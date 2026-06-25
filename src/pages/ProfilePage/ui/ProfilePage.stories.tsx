@@ -23,6 +23,7 @@ const mockUser = {
     avatar: 'https://doctor-veterinar.ru/images/mini-pig.png',
     email: 'anna@example.com',
     birthDate: '1996-09-10',
+    password: '12345',
 };
 
 export const Default: Story = {

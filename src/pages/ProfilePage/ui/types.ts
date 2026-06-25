@@ -2,8 +2,9 @@
 export interface UserProps {
     name: string;
     avatar: string;
-    email: string;
     birthDate: string;
+    password: string;
+    email: string;
 }
 
 export interface ProfilePageUIProps {
