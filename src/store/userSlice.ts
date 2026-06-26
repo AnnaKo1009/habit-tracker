@@ -15,7 +15,7 @@ const initialState: UserState = {
     avatar: 'https://doctor-veterinar.ru/images/mini-pig.png',
     birthDate: '1996-09-10',
     email: 'iamanna@gmail.com',
-    password: '12345',
+    password: '12345A!',
 
 }
 

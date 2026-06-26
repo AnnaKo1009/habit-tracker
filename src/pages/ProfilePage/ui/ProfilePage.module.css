@@ -91,3 +91,31 @@
     font-size: var(--font-size-text);
     font-weight: 500;
 }
+
+.error {
+    color: #EF4444;
+    font-size: var(--font-size-error);
+    padding: 8px 12px;
+    background-color: #FEE2E2;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    margin: 4px 0 8px 0;
+    max-width: 100%; 
+}
+
+.success {
+    color: #4b6b4f;
+    font-size: var(--font-size-error);
+    padding: 8px 12px;
+    background-color: #b7e8be;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin: 4px 0 8px 0;
+
+
+
+}
