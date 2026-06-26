@@ -79,7 +79,7 @@ export const ProfilePageUI: FC<ProfilePageUIProps> = ({
         <div className={styles.actionsPanel}>
           <Button
             variant="btnWithIcon"
-            iconName="stats"
+            iconName='theme'
             onClick={onThemeToggle}
           >
             Сменить тему

@@ -11,7 +11,7 @@
 
   --font-size-text: 15px;
   --font-size-title: 40px;
-  --font-size-error: 12px;
+  --font-size-error: 13px;
 
   --line-height-text: 24px;
   --line-height-title: 48px;
@@ -26,16 +26,4 @@
   --background-color: #EEF1F4;
 
   --border-radius-primary: 34px;
-
-
-
-  /* запасной серый
-  --button-primary-color: #334155 */
-
-  /* --button-primary-color: #1C1C1C;
-  --button-disabled-color: #606E8C;
-  --button-hover-color: #FFB300;
-  --button-active-color: #FF8243;
-  --button-secondary-color: #fe976c;
-  --button-icon-color: #F19CBB; */
 }

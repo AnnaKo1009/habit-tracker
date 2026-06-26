@@ -20,6 +20,17 @@
 
 .logo {
     cursor: pointer;
+    flex-shrink: 0;
+    height: 50px;         /* ← фиксируем высоту */
+    width: auto;          /* ← ширина автоматически */
+    object-fit: contain; 
+    transform: scale(1.3); /* ← сохраняет пропорции */
+    margin-left: 38px;
+}
+
+.logo img {
+    height: 100%;             /* ← растягивается по высоте контейнера */
+    width: auto;              /* ← сохраняет пропорции */
 }
 
 .userContainer {
