@@ -1,2 +1,2 @@
 export { HabitCard } from './HabitCard'
-export type { HabitCardProps } from './HabitCard.types';
+export type { HabitCardProps } from './HabitCard';
