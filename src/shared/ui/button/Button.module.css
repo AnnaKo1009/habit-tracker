@@ -35,7 +35,7 @@
 
 .secondary {
   background-color: var(--button-secondary-color);
-  color: var(--button-primary-color);
+  color: var(--secondary-button-color-text);
   padding: 21px;
 }
 

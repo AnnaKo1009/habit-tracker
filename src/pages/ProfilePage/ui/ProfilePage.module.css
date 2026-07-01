@@ -1,5 +1,5 @@
 .page {
-    background-color: var(--background-color);
+    background-color: var(--page-background-color);
     min-height: 100vh;
 }
 
@@ -19,7 +19,7 @@
     min-width: 200px;
     width: fit-content;           
     height: fit-content;          
-    background-color: white;
+    background-color: var(--background-color);
     border-radius: var(--border-radius-primary);
     align-self: flex-start;      
 }
@@ -29,7 +29,7 @@
     flex-direction: column;
     flex: 1;
     padding: 40px;
-    background-color: white;
+    background-color: var(--background-color);
     border-radius: var(--border-radius-primary);
 }
 
@@ -68,7 +68,7 @@
     border-radius: 8px;
     font-family: var(--font-family);
     font-size: 16px;
-    background-color: white;
+    background-color: var(--background-color);
     outline: none;
     box-sizing: border-box;
 }
@@ -90,6 +90,7 @@
 .label {
     font-size: var(--font-size-text);
     font-weight: 500;
+    color: var(--text-primary-color);
 }
 
 .error {

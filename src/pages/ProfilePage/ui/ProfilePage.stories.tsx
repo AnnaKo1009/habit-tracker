@@ -31,7 +31,6 @@ export const Default: Story = {
         user: mockUser,
         onSubmit: (user) => console.log('Сохранено:', user),
         onStatsClick: () => console.log('Статистика'),
-        onThemeToggle: () => console.log('Тема переключена'),
         onBack: () => console.log('Назад'),
     },
 };

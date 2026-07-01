@@ -17,10 +17,6 @@ export const ProfilePage = () => {
         dispatch(updateUserPassword(updatedUser.password));
     }
 
-    const handleThemeToggle = () => {
-         // TODO: переключение темы
-         console.log('Тема переключена');
-    }
 
     const handleStatsClick = () => {
         navigate('/stats');
@@ -35,7 +31,6 @@ export const ProfilePage = () => {
         user={user}
         onSubmit={handleSubmit}
         onStatsClick={handleStatsClick}
-        onThemeToggle={handleThemeToggle}
         onBack={handleBackClick}
         />
     )

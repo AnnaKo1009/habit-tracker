@@ -10,12 +10,12 @@ import {
   validateUserName,
   validateUserPassword,
 } from "../../../utils/validation";
+import { useTheme } from "../../../hooks/useTheme";
 
 export const ProfilePageUI: FC<ProfilePageUIProps> = ({
   user,
   onSubmit,
   onStatsClick,
-  onThemeToggle,
   onBack,
   className = "",
 }) => {
@@ -26,6 +26,9 @@ export const ProfilePageUI: FC<ProfilePageUIProps> = ({
   const [password, setPassword] = useState(user.password);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+
+
+  const { theme , toggleTheme} = useTheme();
 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -80,9 +83,9 @@ export const ProfilePageUI: FC<ProfilePageUIProps> = ({
           <Button
             variant="btnWithIcon"
             iconName='theme'
-            onClick={onThemeToggle}
+            onClick={toggleTheme}
           >
-            Сменить тему
+            {theme === 'light' ? 'Тёмная тема' : 'Светлая тема'}
           </Button>
           <Button variant="btnWithIcon" iconName="stats" onClick={onStatsClick}>
             Посмотреть подробную статистику

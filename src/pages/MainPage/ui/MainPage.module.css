@@ -4,7 +4,7 @@
     align-items: stretch;
     gap: 24px;
     padding: 20px 24px;
-    background-color: var(--background-color);
+    background-color: var(--page-background-color);
 }
 
 
@@ -16,7 +16,7 @@
 
 
 .habitsContainer {
-    background-color: white;
+    background-color: var(--background-color);
     padding: 40px;
     flex: 1;
     min-width: 250px;
@@ -28,7 +28,10 @@
     /* для прокрутки */
     height: 100%;
     max-height: 900px;         
-    overflow-y: auto;          
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
 

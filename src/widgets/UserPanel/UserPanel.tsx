@@ -17,8 +17,7 @@ export const UserPanel: FC<UserPanelProps> = ({ className }) => {
   };
 
   const handleCheckStats = () => {
-    // TODO: открыть модалку статистики профиля
-    console.log("Stats clicked");
+    navigate('/stats');
   };
 
   return (

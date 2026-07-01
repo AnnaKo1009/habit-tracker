@@ -14,7 +14,7 @@ export const StatsCardUI: FC<StatsCardUIProps> = ({
 
 
     return (
-        <div className={styles.cardContainer} style ={{backgroundColor: color}}>
+        <div className={`${styles.cardContainer} ${className}`} style ={{backgroundColor: color}}>
             <div className={styles.iconWrapper} >
                 <Icon name={icon} size={32}/>
             </div>

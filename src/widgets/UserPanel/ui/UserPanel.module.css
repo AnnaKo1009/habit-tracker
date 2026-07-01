@@ -5,7 +5,7 @@
     justify-content: center;
     padding: 32px 16px;
     gap: 16px;
-    background-color: white;
+    background-color: var(--background-color);
     border-radius: var(--border-radius-primary);
     width: 100%;
     max-width: 280px;
@@ -17,7 +17,7 @@
 .name {
     font-size: var(--font-size-text);
     font-weight: var(--font-weight-medium);
-    color: var(--button-primary-color);
+    color: var(--text-primary-color);
     text-align: center;
 }
 

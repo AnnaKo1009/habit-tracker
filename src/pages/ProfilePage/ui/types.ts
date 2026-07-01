@@ -11,7 +11,6 @@ export interface ProfilePageUIProps {
     user: UserProps;
     onSubmit: (user: UserProps) => void;
     className?: string;
-    onThemeToggle: () => void;
     onStatsClick: () => void;
     onBack: () => void;
 

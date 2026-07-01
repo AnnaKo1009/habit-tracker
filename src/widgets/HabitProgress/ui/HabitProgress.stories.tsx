@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { HabitProgressListUI } from './HabitProgress';
 
 const meta = {
-    title: 'Widgets/HabitProgressList',
+    title: 'Widgets/HabitProgressListUI',
     component: HabitProgressListUI,
     tags: ['autodocs'],
 } satisfies Meta<typeof HabitProgressListUI>;
