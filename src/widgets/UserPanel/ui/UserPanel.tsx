@@ -15,7 +15,7 @@ export const UserPanelUI: FC<UserPanelUIProps> = ({
         <Avatar src={userAvatar} className={styles.avatar} size='large'/>
         <span className={styles.name}>{userName}</span>
         <Button variant='btnWithIcon' iconName='editProfile' className={styles.actionButton}  onClick={onEditProfile}>Редактировать профиль</Button>
-        <Button variant='btnWithIcon' iconName='stats' className={styles.actionButton}  onClick={onCheckStats}>Посмотреть полную статистику</Button>
+        <Button variant='btnWithIcon' iconName='stats' className={styles.actionButton}  onClick={onCheckStats}>Посмотреть статистику</Button>
     </div>
 
     )

@@ -6,22 +6,26 @@
 .mainContent {
     display: flex;
     flex-direction: row;
-    padding: 40px;
-    gap: 54px;
+    gap: var(--page-gap);
+    padding: var(--page-padding);
 }
-
 
 .actionsPanel {
     display: flex;
     flex-direction: column;
-    gap: 16px;                    
-    padding: 34px 40px;          
-    min-width: 200px;
-    width: fit-content;           
-    height: fit-content;          
+    gap: 16px;
+    padding: var(--panel-padding);
+    min-width: var(--panel-min-width);
+    width: 280px;                
     background-color: var(--background-color);
     border-radius: var(--border-radius-primary);
-    align-self: flex-start;      
+    align-self: flex-start;
+}
+
+.actionButton {
+    margin-top: 0;    
+    padding: 18px 12px;
+    width: 100%; 
 }
 
 .profileInfo {

@@ -3,7 +3,7 @@ import  type { StatisticsWidgetUIProps } from './types';
 import styles from './StatisticsWidget.module.css';
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
 
-const COLORS = ['#14B8A6', '#E2E8F0'];
+const COLORS = ['#f19cbb', '#E2E8F0'];
 
 export const StatisticsWidgetUI: FC<StatisticsWidgetUIProps> = ({
     completed,
@@ -50,7 +50,7 @@ export const StatisticsWidgetUI: FC<StatisticsWidgetUIProps> = ({
                     </ResponsiveContainer>
                     <div className={styles.stats}>
                         <div className={styles.statItem}>
-                            <span className={styles.point} style={{ backgroundColor: '#14B8A6' }}/>
+                            <span className={styles.point} style={{ backgroundColor: '#f19cbb' }}/>
                             <span>Выполнено: {completed}</span>
                         </div>
                         <div className={styles.statItem}>
@@ -61,7 +61,7 @@ export const StatisticsWidgetUI: FC<StatisticsWidgetUIProps> = ({
                     {uncompleted === 0 && <hr className={styles.divider} />}
                     { uncompleted === 0 && (
                             <div className={styles.congrats}>
-                            <span >Вы выполнили все на {formattedDate}! </span>
+                            <span>Вы выполнили все на {formattedDate}! </span>
                             </div>
                         )}
                 </div>

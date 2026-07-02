@@ -20,10 +20,10 @@ export const StatsPageUI: FC<StatsPageUIProps> = ({
       <Header variant="dashboard" />
       <div className={styles.mainContent}>
         <div className={styles.actionsPanel}>
-          <Button variant="btnWithIcon" iconName="theme" onClick={onReturnMain}>
+          <Button variant="btnWithIcon" iconName="back" onClick={onReturnMain} className={styles.actionButton}>
             На главную
           </Button>
-          <Button variant="btnWithIcon" iconName="edit" onClick={onEditProfile}>
+          <Button variant="btnWithIcon" iconName="editProfile" onClick={onEditProfile} className={styles.actionButton}>
             Редактировать профиль
           </Button>
         </div>

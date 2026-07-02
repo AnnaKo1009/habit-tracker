@@ -14,7 +14,9 @@ export const AddHabitWidgetUI: FC<AddHabitWidgetUIProps> = ({
         backgroundImage: 'url(/images/addWidgetBackground.png)'
       }}
     >
-      <span className={`${styles.title}`}>Новое дело или привычка</span>
+      <div className={styles.titleContainer}>
+      <span className={styles.title}>Новое дело или привычка</span>
+      </div>
       <div className={styles.textContainer}>
         <span className={`${styles.text}`}>
           Добавьте то, что важно именно для вас

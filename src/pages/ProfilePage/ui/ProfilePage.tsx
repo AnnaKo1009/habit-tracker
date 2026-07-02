@@ -28,7 +28,7 @@ export const ProfilePageUI: FC<ProfilePageUIProps> = ({
   const [success, setSuccess] = useState('');
 
 
-  const { theme , toggleTheme} = useTheme();
+  // const { theme , toggleTheme} = useTheme();
 
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -82,13 +82,14 @@ export const ProfilePageUI: FC<ProfilePageUIProps> = ({
         <div className={styles.actionsPanel}>
           <Button
             variant="btnWithIcon"
-            iconName='theme'
-            onClick={toggleTheme}
-          >
-            {theme === 'light' ? 'Тёмная тема' : 'Светлая тема'}
+            iconName='back'
+            onClick={onBack}
+            className={styles.actionButton}
+          >На главную
+            {/* {theme === 'light' ? 'Тёмная тема' : 'Светлая тема'} */}
           </Button>
-          <Button variant="btnWithIcon" iconName="stats" onClick={onStatsClick}>
-            Посмотреть подробную статистику
+          <Button variant="btnWithIcon" iconName="stats" onClick={onStatsClick} className={styles.actionButton}>
+            Посмотреть статистику
           </Button>
         </div>
         <div className={styles.profileInfo}>

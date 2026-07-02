@@ -43,14 +43,23 @@
 
 .user {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 5px;
-    padding: 0 40px 0 0;
+    gap: 30px;
+    padding: 0 10px 0 0;
     border-left: 2px solid #E2E8F0;
-    padding-left: 64px;
+    padding-left: 34px;
     font-weight: var(--font-weight-medium);
     font-size: 14px;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-right: 64px;
+
 }
 
 .timer {
@@ -62,7 +71,30 @@
     color: transparent;
 }
 
-.userContainer:hover .avatar {
+.userInfo:hover .avatar {
     transform: scale(1.08);
     transition: transform 0.2s ease;
+}
+
+.themeButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 50%;
+    transition: background 0.2s ease;
+    color: var(--text-primary-color);
+    width: 60px;          
+    height: 60px; 
+    opacity: 1;
+}
+
+.themeButton:hover {
+     background-color: rgba(20, 184, 166, 0.2);  
+    opacity: 1;                
+}
+
+.themeButton svg {
+    width: 28px;
+    height: 28px;
 }

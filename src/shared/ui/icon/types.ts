@@ -7,10 +7,13 @@ export interface IconProps {
     | "editProfile"
     | "pictEdit"
     | "stats"
+    | "back"
     | "theme"
     | "today"
     | "best"
-    | "progress";
+    | "progress"
+    | "moon"
+    | "sun";
   onClick?: () => void;
   className?: string;
   size?: number;

@@ -6,20 +6,27 @@
 
 .mainContent {
     display: flex;
-    gap: 40px;
-    padding: 24px;
+    gap: var(--page-gap);
+    padding: var(--page-padding);
 }
 
 .actionsPanel {
     background-color: var(--background-color);
-    padding: 40px;
+    padding: var(--panel-padding);
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
     border-radius: var(--border-radius-primary);
     flex: 0 0 auto;
     align-self: flex-start;
-    min-width: 180px;
+    width: 280px;              
+    min-width: var(--panel-min-width);
+}
+
+.actionButton {
+    margin-top: 0;    
+    padding: 18px 12px;
+    width: 100%; 
 }
 
 .statsContainer {

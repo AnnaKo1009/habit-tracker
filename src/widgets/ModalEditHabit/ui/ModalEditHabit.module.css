@@ -12,30 +12,41 @@
 .dateInput {
     width: 100%;
     padding: 21px 12px;
-    border: 1px solid #E2E8F0;
+    border: 1px solid var(--input-border);
     border-radius: 12px;
     font-family: var(--font-family);
     font-size: var(--font-size-text);
-    background-color: var(--background-color);
+    background-color: var(--input-bg, white);
     outline: none;
     box-sizing: border-box;
     cursor: pointer;
+    color: var(--input-text, #0F172A);
+}
+
+.dateInput::-webkit-datetime-edit-text {
+    color: var(--text-light-color, #94A3B8);
+}
+
+.dateInput::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(0.5);
 }
 
 .intervalInput {
     width: 100%;
     padding: 21px 12px;
-    border: 1px solid #E2E8F0;
+    border: 1px solid var(--input-border, #E2E8F0);
     border-radius: 12px;
     font-family: var(--font-family);
     font-size: var(--font-size-text);
-    background-color: var(--background-color);
+    background-color: var(--input-bg, white);
     outline: none;
     box-sizing: border-box;
+    color: var(--input-text, #0F172A);
 }
 
 .intervalInput::placeholder {
-    color: #94A3B8;
+    color: var(--text-light-color, #94A3B8);
 }
 
 .buttonSection {

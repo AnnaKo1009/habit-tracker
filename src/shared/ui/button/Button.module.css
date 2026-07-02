@@ -88,23 +88,20 @@
   color: var(--button-primary-color);
 }
 
-/* .icon:hover:not(:disabled) {
+.icon:hover:not(:disabled) {
   background-color: var(--button-hover-color);
-} */
-
-.icon:active:not(:disabled) {
-  background-color: var(--button-active-color);
 }
+
 
 .btnWithIcon {
     background-color: var(--button-primary-color);
     color: white;
-    padding: 14px 26px;       
+    padding: 14px 14px;       
     font-size: 14px;         
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 5px;
 }
 
 .btnWithIcon:disabled {

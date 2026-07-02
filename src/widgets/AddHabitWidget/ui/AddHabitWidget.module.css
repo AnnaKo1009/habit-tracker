@@ -1,7 +1,7 @@
 .container {
   position: relative;
   border-radius: var(--border-radius-primary);
-  padding: 30px 14px;
+  padding: 25px 14px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -17,11 +17,16 @@
   width: 100%;
 }
 
+.titleContainer {
+  width: 100%;
+  max-width: 180px;  
+}
+
 .title {
-  font-size: var(----font-size-text);
+  font-size: 16px;
   font-weight: var(--font-weight-bold);
   margin-bottom: 8px;
-  max-width: 100%;             
+  width: 100%;           
   word-break: break-word;       
 }
 
@@ -46,7 +51,7 @@
 .buttonContainer {
     position: absolute;
     bottom: 8%;
-    left: 5%;
+    left: 11%;
     width: 15%;       
     max-width: 56px;   
     min-width: 32px;   
@@ -60,6 +65,23 @@
     background-color: var(--button-icon-color);
 }
 
+
 .addButton:hover:not(:disabled) {
-  background-color: var(--button-hover-color);
+    background-color: var(--button-icon-color);
+    box-shadow: 0 0 20px var(--neon-glow),
+                0 0 40px var(--neon-glow);
+    transform: scale(1.05);
+}
+
+.addButton:active:not(:disabled) {
+    transform: scale(0.92);
+    background-color: var(--button-active-color);        
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.6),
+                0 0 40px rgba(34, 197, 94, 0.3);
+}
+
+.addButton svg {
+    width: 60%;
+    height: 60%;
+    fill: white;
 }
