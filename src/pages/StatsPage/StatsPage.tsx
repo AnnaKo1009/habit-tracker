@@ -12,7 +12,7 @@ const mockHabitsProgress = [
 export const StatsPage: FC = () => {
     const navigate= useNavigate();
 
-    const handleReturnMain = () => navigate('/');
+    const handleReturnMain = () => navigate('/main');
     const handleEditProfile = () => navigate('/profile');
 
     return (

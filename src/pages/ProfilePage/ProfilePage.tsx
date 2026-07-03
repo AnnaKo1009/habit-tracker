@@ -23,7 +23,7 @@ export const ProfilePage = () => {
     }
 
     const handleBackClick = () => {
-        navigate('/')
+        navigate('/main')
     }
 
     return (

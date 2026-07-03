@@ -88,9 +88,6 @@
   color: var(--button-primary-color);
 }
 
-.icon:hover:not(:disabled) {
-  background-color: var(--button-hover-color);
-}
 
 
 .btnWithIcon {

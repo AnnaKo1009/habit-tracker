@@ -13,7 +13,8 @@ export interface IconProps {
     | "best"
     | "progress"
     | "moon"
-    | "sun";
+    | "sun"
+    | "log-out";
   onClick?: () => void;
   className?: string;
   size?: number;

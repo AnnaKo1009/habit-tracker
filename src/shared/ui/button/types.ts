@@ -18,6 +18,7 @@ export interface ButtonProps {
     | "best"
     | "progress"
     | "moon"
-    | "sun";
+    | "sun"
+    | "log-out";
   size?: "small" | "medium" | "large";
 }

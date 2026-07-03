@@ -20,6 +20,10 @@ export const UserPanel: FC<UserPanelProps> = ({ className }) => {
     navigate('/stats');
   };
 
+  const handleExit = () => {
+    navigate('/login');
+  }
+
   return (
     <UserPanelUI
       userName={userName}
@@ -27,6 +31,7 @@ export const UserPanel: FC<UserPanelProps> = ({ className }) => {
       className={className}
       onEditProfile={handleEditProfile}
       onCheckStats={handleCheckStats}
+      onExit={handleExit}
     />
   );
 };

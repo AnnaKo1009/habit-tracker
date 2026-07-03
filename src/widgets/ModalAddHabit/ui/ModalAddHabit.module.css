@@ -26,10 +26,14 @@
     color: white;
 }
 
+.intervalInput:focus {
+    border-color: var(--button-hover-color);
+}
+
 .dateInput {
     width: 100%;
     padding: 21px 12px;
-    border: none;
+    border: 1px solid var(--input-border);
     border-radius: 12px;
     font-family: var(--font-family);
     font-size: var(--font-size-text);
@@ -38,6 +42,10 @@
     color: var(--text-primary-color);                
     box-sizing: border-box;
     cursor: pointer;
+}
+
+.dateInput:focus {
+    border-color: var(--button-hover-color);
 }
 
 .dateInput::-webkit-datetime-edit-text {

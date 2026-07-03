@@ -23,6 +23,11 @@
     color: var(--input-text, #0F172A);
 }
 
+.dateInput:focus {
+    border-color: var(--button-hover-color);
+}
+
+
 .dateInput::-webkit-datetime-edit-text {
     color: var(--text-light-color, #94A3B8);
 }
@@ -47,6 +52,10 @@
 
 .intervalInput::placeholder {
     color: var(--text-light-color, #94A3B8);
+}
+
+.intervalInput:focus {
+    border-color: var(--button-hover-color);
 }
 
 .buttonSection {

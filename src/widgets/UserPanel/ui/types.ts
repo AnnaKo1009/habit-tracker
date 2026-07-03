@@ -3,6 +3,7 @@ export interface UserPanelUIProps {
     userAvatar?: string;
     onEditProfile: () => void;
     onCheckStats: () => void;
+    onExit: () => void;
     className?: string;
     
 }

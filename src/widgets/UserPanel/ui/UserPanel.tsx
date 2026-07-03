@@ -9,13 +9,15 @@ export const UserPanelUI: FC<UserPanelUIProps> = ({
     userAvatar,
     onEditProfile,
     onCheckStats,
-    className=''
+    className='',
+    onExit,
 }) => {
     return (< div className={`${styles.userPanelContainer} ${className}`}>
         <Avatar src={userAvatar} className={styles.avatar} size='large'/>
         <span className={styles.name}>{userName}</span>
         <Button variant='btnWithIcon' iconName='editProfile' className={styles.actionButton}  onClick={onEditProfile}>Редактировать профиль</Button>
         <Button variant='btnWithIcon' iconName='stats' className={styles.actionButton}  onClick={onCheckStats}>Посмотреть статистику</Button>
+        <Button variant='btnWithIcon' iconName='log-out' className={styles.actionButton}  onClick={onExit}>Выйти из профиля</Button>
     </div>
 
     )

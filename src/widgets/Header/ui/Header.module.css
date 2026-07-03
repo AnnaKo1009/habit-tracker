@@ -90,11 +90,36 @@
 }
 
 .themeButton:hover {
-     background-color: rgba(20, 184, 166, 0.2);  
-    opacity: 1;                
+    transform: scale(1.13);
+    transition: transform 0.2s ease;               
 }
 
 .themeButton svg {
+    width: 28px;
+    height: 28px;
+}
+
+.themeButtonAuth {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 50%;
+    transition: background 0.2s ease;
+    color: var(--text-primary-color);
+    width: 60px;          
+    height: 60px; 
+    opacity: 1;
+    margin-right: 50px;
+
+}
+
+.themeButtonAuth:hover {
+    transform: scale(1.13);
+    transition: transform 0.2s ease;               
+}
+
+.themeButtonAuth svg {
     width: 28px;
     height: 28px;
 }
