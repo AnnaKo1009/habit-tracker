@@ -1,0 +1,97 @@
+.page {
+    background-color: var(--page-background-color);
+    min-height: 100vh;
+
+}
+
+.mainContent {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+}
+
+.regContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;                     
+    width: 100%;                    
+    max-width: 480px;              
+    background-color: var(--background-color);
+    border-radius:  var(--border-radius-primary);
+    padding: 30px;
+    margin-top: 40px;
+    
+}
+
+.inputSection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+}
+
+.input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid var(--input-border);
+    border-radius: 8px;
+    font-family: var(--font-family);
+    font-size: 15px;
+    background-color: var(--input-bg);
+    outline: none;
+    box-sizing: border-box;
+    color: var(--input-text);
+    transition: border-color 0.2s ease;
+}
+
+.input:focus {
+    border-color: var(--button-hover-color);
+}
+
+.input::placeholder {
+    color: var(--input-placeholder);
+}
+
+.input[type="date"] {
+    padding: 16px 18px;
+    color: var(--input-text);
+}
+
+.buttonSection {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+
+}
+
+.error {
+    color: #EF4444;
+    font-size: var(--font-size-error);
+    padding: 8px 12px;
+    background-color: #FEE2E2;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    margin: 4px 0 8px 0;
+    max-width: 100%; 
+}
+
+/* ===== ОТКЛЮЧАЕМ СТИЛИ АВТОЗАПОЛНЕНИЯ ===== */
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px var(--input-bg) inset !important;
+    -webkit-text-fill-color: var(--input-text) !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.input:-moz-autofill {
+    background-color: var(--input-bg) !important;
+    color: var(--input-text) !important;
+}
