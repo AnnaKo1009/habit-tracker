@@ -1,5 +1,5 @@
 export interface LoginDataProps {
-    username: string;
+    login: string;
     password: string;
 }
 

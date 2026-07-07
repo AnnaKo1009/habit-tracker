@@ -3,10 +3,7 @@ import styles from "./LoginPage.module.css";
 import { useState, type FC } from "react";
 import { Header } from "../../../widgets/Header";
 import { Input } from "../../../shared/ui/input";
-import {
-  validateUserName,
-  validateUserPassword,
-} from "../../../utils/validation";
+import { validateUserPassword } from "../../../utils/validation";
 import { Button } from "../../../shared/ui/button";
 
 export const LoginPageUI: FC<LoginPageUIProps> = ({
@@ -16,14 +13,13 @@ export const LoginPageUI: FC<LoginPageUIProps> = ({
   serverError='',
   isLoading = false,
 }) => {
-  const [name, setName] = useState("");
+  const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
   const [validationError, setValidationError] = useState("");
 
   const handleSubmitForm = () => {
-    const nameError = validateUserName(name);
-    if (nameError) {
-      setValidationError(nameError);
+    if (!login.trim()) {
+      setValidationError("Введите email или имя пользователя");
       return;
     }
 
@@ -34,7 +30,7 @@ export const LoginPageUI: FC<LoginPageUIProps> = ({
     }
 
     setValidationError("");
-    onSubmit({ username: name, password });
+    onSubmit({ login,  password });
   };
 
   return (
@@ -45,10 +41,10 @@ export const LoginPageUI: FC<LoginPageUIProps> = ({
           <div className={styles.inputSection}>
             <div className={styles.inputContainer}>
               <Input
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                value={login}
+                onChange={(e) => setLogin(e.target.value)}
                 className={styles.input}
-                placeholder="Имя пользователя"
+                placeholder="Email или имя пользователя"
               />
             </div>
             <div className={styles.inputContainer}>
