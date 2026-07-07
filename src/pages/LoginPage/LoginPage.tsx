@@ -41,7 +41,7 @@ export const LoginPage: FC = () => {
 
         localStorage.setItem('token', result.token);
 
-        navigate('/');
+        navigate('/main');
 
     } catch (err) {
         setError(err instanceof Error ? err.message : 'Ошибка входа');
