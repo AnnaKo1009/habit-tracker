@@ -4,6 +4,7 @@ import { ProfilePage } from "./pages/ProfilePage/ProfilePage";
 import { StatsPage } from "./pages/StatsPage/StatsPage";
 import { LoginPage } from "./pages/LoginPage/LoginPage";
 import { RegisterPage } from "./pages/RegisterPage/RegisterPage";
+import { ProtectedRoute } from "./components/ProtectedRoute";
 
 
 
@@ -14,9 +15,11 @@ function App() {
             <Route path="/login" element={<LoginPage/>}/>
             <Route path="/register" element={<RegisterPage/>}/>
             <Route path="/" element={<Navigate to='/login' replace/>}/>
-            <Route path="/main" element={<MainPage/>}/>
-            <Route path="/profile" element={<ProfilePage/>}/>
-            <Route path="/stats" element={<StatsPage/>}/>
+
+
+            <Route path="/main" element={ <ProtectedRoute> <MainPage/> </ProtectedRoute>}/>
+            <Route path="/profile" element={ <ProtectedRoute> <ProfilePage/> </ProtectedRoute>}/>
+            <Route path="/stats" element={<ProtectedRoute> <StatsPage/> </ProtectedRoute>}/>
           </Routes>
         </BrowserRouter>
     )
