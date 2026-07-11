@@ -20,7 +20,7 @@ export const ProgressChart: FC<ProgressChartProps> = ({ title, className }) => {
             const dateString = date.toISOString().split('T')[0];
 
             const count = habits.filter(h =>
-            h.completedDates.includes(dateString)
+            h.logs.some(log => log.date === dateString && log.completed)
         ).length;
 
         result.push({date: dateString, count})

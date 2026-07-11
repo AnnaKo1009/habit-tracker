@@ -2,7 +2,7 @@ import type { Meta } from '@storybook/react';
 import { MainPageUI } from './MainPage';
 import { mockHabits } from '../../../mocks/habits';
 import { useState } from 'react';
-import type { Habit } from '../../../widgets/HabitCard/ui/types';
+import type { Habit } from '../../../api/habitsApi'; 
 
 const meta = {
     title: 'Pages/MainPageUI',

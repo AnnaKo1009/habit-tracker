@@ -34,11 +34,11 @@ export const MainPageUI: FC<MainPageUIProps> = ({
 );
   
 const uncompleted = filteredHabits.filter(
-  habit => !habit.completedDates.includes(selectedDateString)
+  habit => !habit.logs.some(log => log.date === selectedDateString && log.completed)
 );
 
 const completed = filteredHabits.filter(
-  habit => habit.completedDates.includes(selectedDateString)
+  habit => habit.logs.some(log => log.date === selectedDateString && log.completed)
 );
 
 

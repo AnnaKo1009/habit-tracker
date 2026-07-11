@@ -13,7 +13,7 @@ export const HabitProgressListUI: FC<HabitProgressListUIProps> = ({
             <h3 className={styles.title}>{title}</h3>
             <div className={styles.list}>
                 {habits.map((habit) => (
-                    <div className={styles.habitItem}>
+                    <div key={habit.id} className={styles.habitItem}>
                         <div className={styles.habitInfo}>
                             <span className={styles.habitName}>{habit.name}</span>
                             <span className={styles.habitsStats}>{habit.completedDays}/{habit.totalDays}</span>

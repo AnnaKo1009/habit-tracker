@@ -1,4 +1,4 @@
-import type { Habit } from '../../../widgets/HabitCard/ui/types';
+import type { Habit } from '../../../api/habitsApi';
 
 export interface MainPageUIProps {
     habits: Habit[];

@@ -2,7 +2,7 @@ import { useCallback, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks"
 import { MainPageUI } from "./ui";
 import { deleteHabit, toggleHabitDate } from "../../store/habitsSlice";
-import type { Habit } from "../../widgets/HabitCard/ui/types";
+import type { Habit } from '../../api/habitsApi';
 
 
 export const MainPage = () => {

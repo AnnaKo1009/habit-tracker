@@ -17,10 +17,10 @@ export const StatisticsWidget = ({ selectedDate, className }: StatisticsWidgetPr
     )
 
     const completed = visibleHabits.filter(habit => 
-        habit.completedDates.includes(selectedDateString)).length;
+        habit.logs.some(log => log.date === selectedDateString && log.completed)).length;
 
     const uncompleted = visibleHabits.filter((habit) => 
-       !habit.completedDates.includes(selectedDateString)).length;
+       !habit.logs.some(log => log.date === selectedDateString && log.completed)).length;
 
     return (
         <StatisticsWidgetUI 

@@ -1,7 +1,6 @@
 import { type FC } from 'react';
 import { HabitCardUI } from './ui';
-
-import type { Habit } from './ui/types'; 
+import type { Habit } from '../../api/habitsApi'; 
 
 export interface HabitCardProps {
     habit: Habit;
