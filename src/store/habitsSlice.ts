@@ -1,16 +1,6 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import { mockHabits } from "../mocks/habits";
-
-interface Habit {
-  id: string;
-  name: string;
-  completed: boolean;
-  completedDates: string[];
-  createdAt: string;
-  startDate: string;
-  frequency: "daily" | "weekly" | "custom";
-  interval?: number;
-}
+import type { Habit } from '../api/habitsApi';
 
 interface HabitsState {
   items: Habit[];
@@ -54,11 +44,15 @@ const habitsSlice = createSlice({
     ) => {
       const habit = state.items.find((h) => h.id === action.payload.id);
       if (habit) {
-        const index = habit.completedDates.indexOf(action.payload.date);
-        if (index === -1) {
-          habit.completedDates.push(action.payload.date);
+        const existingLogHabit = habit.logs.findIndex((log) => log.date === action.payload.date );
+
+        if(existingLogHabit === -1) {
+          habit.logs.push({
+            date: action.payload.date,
+            completed: true,
+          });
         } else {
-          habit.completedDates.splice(index, 1);
+          habit.logs.splice(existingLogHabit, 1);
         }
       }
     },

@@ -4,9 +4,9 @@ export interface Habit {
     completed: boolean;
     createdAt: string;
     startDate: string;
-    completedDates: string[];
     frequency: 'daily' | 'weekly' | 'custom';
     interval?: number;
+    logs: { date: string; completed: boolean }[];
 
 }
 

@@ -15,7 +15,7 @@ export const HabitCardUI: FC<HabitCardUIProps> = ({
 }) => {
 
     const selectedDateString = selectedDate.toLocaleDateString('en-CA'); 
-    const isCompleted = habit.completedDates.includes(selectedDateString);
+    const isCompleted = habit.logs.some(log => log.date === selectedDateString && log.completed);
 
     const [isExiting, setIsExiting] = useState(false); // для добавления класса exiting для анимации анимации
 
